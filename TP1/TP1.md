@@ -22,8 +22,11 @@ Ecrivez un programme *cercle.c* qui calcule l'aire et le périmètre d'un
 cercle
 
 a.  l'aire: Utilisez une variable **rayon** : float ou double
+
 b.  le périmètre: Utilisez une variable **rayon** : float ou double
+
 c.  Compilez *cercle.c* et créez un fichier éxecutable nommé cercle
+
 d.  Exécutez 'cercle'
 
 
@@ -34,13 +37,21 @@ Ecrivez un programme *sizeof_types.c* qui affiche la taille des
 différents types de base (en octets) :
 
 i.  char
+
 ii. short
+
 iii. int
+
 iv. long int
+
 v.  long long int
+
 vi. float
+
 vii. double
+
 viii. long double
+
 
 Ne pas oubliez d'utiliser les versions signées et non-signées. Testez le
 programme (compilez et exécuter).
@@ -53,13 +64,21 @@ Ecrivez un programme *variables.c* qui affecte et affiche les valeurs
 des variables des différents types de base :
 
 i.  char
+
 ii. short
+
 iii. int
+
 iv. long int
+
 v.  long long int
+
 vi. float
+
 vii. double
+
 viii. long double
+
 
 N'oubliez pas d'utiliser les versions signées et non-signées. Testez
 le programme.
@@ -107,8 +126,11 @@ ou continue) pour l'affichage de numéros <= 1000 qui sont divisible par
 :
 
 a.  2 et 15
+
 b.  103 ou 107
+
 c.  7 ou 5, mais pas par 3
+
 
 
 #### Exercice 1.8 [★★★]
