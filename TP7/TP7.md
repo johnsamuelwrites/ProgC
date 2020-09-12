@@ -47,7 +47,8 @@ pour travailler avec le format de messages JSON. Par exemple,
 {                
    "code" : "couleurs",                
    "valeurs" : [ "0effeee", ...]              
-}             ```
+}             
+```
 
 #### Fichiers
 
