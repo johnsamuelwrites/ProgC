@@ -79,7 +79,8 @@ int factorielle (int num) {
   else {
     return (num * factorielle (num-1));
   }
-}             ```
+}
+```
 
 Écrivez le code *factorielle.c* et testez la fonction factorielle avec
 différents entiers naturels.
@@ -94,13 +95,16 @@ deux sont à saisir par l'utilisateur. *chercherfichier.c* doit afficher
 toutes les lignes de fichier où les mots sont présents et également le
 nombre de fois qu'ils sont présents. Par exemple,
 
-```              $ ./chercherfichier int fichier.c             ```
+```
+$ ./chercherfichier int fichier.c             
+```
 
 Vous devez afficher
 
 ```              
 Ligne 10, 2 fois
-Ligne 30, 1 fois             ```
+Ligne 30, 1 fois             
+```
 
 
 #### Exercice 4.7 [★★★]
