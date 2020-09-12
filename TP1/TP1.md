@@ -86,12 +86,13 @@ affiche un triangle rectangle. La taille du triangle est dependent de la
 valeur de la variable **compter** (**compter** < 4 inacceptable).
 Exemple, si **compter** = 5, le programme affiche
 
-`              
+```
 *              
 * *               
 * # *              
 * # # *              
-* * * * *             `
+* * * * *
+```
 
 Testez le code avec les différentes valeurs de compter. Ecrivez une
 nouvelle version du code en utilisant **while** ou **do..while**.
@@ -162,7 +163,7 @@ opérateurs.c, sizeof_types.c, variables.c*
  
 **CONTRIBUTORS**
 
-`              
+```             
  1. NOM Prénom
  2. NOM Prénom
 `
@@ -186,7 +187,7 @@ opérateurs.c, sizeof_types.c, variables.c*
 * commentaire 1               
 * commentaire 2               
 * ..             
-`
+```
 
 
 
