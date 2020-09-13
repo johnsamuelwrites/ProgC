@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <search.h>
 
+//compter les couleurs distincts 
 couleur_compteur* compte_couleur(couleur *c, int csize) {
    couleur_compteur *compteur;
    COMPTEBIT bc;
@@ -50,6 +51,9 @@ couleur_compteur* compte_couleur(couleur *c, int csize) {
      return NULL;
    }
 
+   /*
+    * créer une table de hachage pour stocker les différentes couleurs et leur nombre
+    */
    hcreate(csize);
 
    for (i=0; i < csize; i++) {
@@ -101,14 +105,15 @@ couleur_compteur* compte_couleur(couleur *c, int csize) {
    return compteur;
 }
 
+//afficher les couleurs
 void print_couleur(couleur *c, int csize) {
    int i = 0;
 
    for (i=0; i < csize; i++) {
-     if (c->compte_bit == BITS24) {
+     if (c->compte_bit == BITS24) { // 3 octets (RGB)
        printf("%5x %5x %5x\n", c->c.c24[i].rouge, c->c.c24[i].vert, c->c.c24[i].bleu); 
      }
-     else if (c->compte_bit == BITS32) {
+     else if (c->compte_bit == BITS32) { // 4 octets (RGBA)
        printf("%5x %5x %5x %5x\n", c->c.c32[i].rouge, c->c.c32[i].vert, c->c.c32[i].bleu, c->c.c32[i].alpha); 
      }
      else {
@@ -117,6 +122,7 @@ void print_couleur(couleur *c, int csize) {
    }
 }
 
+//afficher le compte de couleurs distincts
 void print_couleur_compteur(couleur_compteur * ccompteur) {
    int i = 0;
 
@@ -131,6 +137,9 @@ void print_couleur_compteur(couleur_compteur * ccompteur) {
 
 }
 
+/*
+ * fonction permettant de comparer deux couleurs
+ */
 static int compare_compteur (const void *ccp1, const void *ccp2, void *compte_bitp) {
   COMPTEBIT *bc = (COMPTEBIT *)compte_bitp;
   if (*bc == BITS24) {
@@ -157,6 +166,7 @@ static int compare_compteur (const void *ccp1, const void *ccp2, void *compte_bi
   }
 }
 
+//trier le compte de couleurs distincts
 void trier_couleur_compteur(couleur_compteur * ccompteur) {
   COMPTEBIT bc = ccompteur->compte_bit;
   if ( ccompteur->compte_bit == BITS24) {
