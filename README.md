@@ -50,9 +50,9 @@ de tous les exercices, vous serez captable de
 3.  Total points pour tous les travaux pratiques: 20
 4.  Rendu en ligne.
 5.  Chaque question a un niveau de difficulté
-    -   [★]: Facile
-    -   [★★]: Difficulté moyenne
-    -   [★★★]: Difficile
+    -   ★: Facile
+    -   ★★: Difficulté moyenne
+    -   ★★★: Difficile
 
 #### Rendus
 
