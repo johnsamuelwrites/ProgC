@@ -60,11 +60,9 @@ Il y a deux parties de rendu: rapport d'auto-évaluation et les sources
 
 Votre dossier de rendu doit contenir les fichiers suivants:
 
-a.  README: rapport d'auto-évaluation
-
-b.  CONTRIBUTORS: Noms et prénoms de contributeurs
-
-c.  src/ : le code source dans le répertoire *src*
+- a.  README: rapport d'auto-évaluation
+- b.  CONTRIBUTORS: Noms et prénoms de contributeurs
+- c.  src/ : le code source dans le répertoire *src*
 
 Votre rendu doit renommer comme groupe_N1_N2, où N1 et N2 sont les
 noms (e.g., groupe_DUPONT_SMITH.).
@@ -73,13 +71,10 @@ Ecrivez README et CONTRIBUTORS en format markdown.
 
 Le contenu de README rapport d'auto-évaluation : TP N (N: [1..7])
 
-i.  Bibliothèques: les bibliothèques standards
-
-ii. Références: les URLs, les groupes
-
-iii. Difficulté: niveau de difficulté (facile, moyenne, difficile)
-
-iv. Commentaires (optionnels): remarques etc.
+- i.  Bibliothèques: les bibliothèques standards
+- ii. Références: les URLs, les groupes
+- iii. Difficulté: niveau de difficulté (facile, moyenne, difficile)
+- iv. Commentaires (optionnels): remarques etc.
 
 
 #### Liste de contrôle
