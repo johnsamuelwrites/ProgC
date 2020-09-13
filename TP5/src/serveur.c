@@ -44,6 +44,7 @@ int recois_envoie_message(int socketfd) {
     return(EXIT_FAILURE);
   }
 
+  // la réinitialisation de l'ensemble des données
   memset(data, 0, sizeof(data));
 
   //lecture de données envoyées par un client
@@ -53,7 +54,11 @@ int recois_envoie_message(int socketfd) {
     perror("erreur lecture");
     return(EXIT_FAILURE);
   }
-        
+  
+  /*
+   * extraire le code des données envoyées par le client. 
+   * Les données envoyées par le client peuvent commencer par le mot "message :" ou un autre mot.
+   */
   printf ("Message recu: %s\n", data);
   char code[10];
   sscanf(data, "%s:", code);
@@ -76,7 +81,7 @@ int main() {
   struct sockaddr_in server_addr, client_addr;
 
   /*
-   * Creation d'un socket
+   * Creation d'une socket
    */
   socketfd = socket(AF_INET, SOCK_STREAM, 0);
   if ( socketfd < 0 ) {
@@ -93,13 +98,17 @@ int main() {
   server_addr.sin_port = htons(PORT);
   server_addr.sin_addr.s_addr = INADDR_ANY;
 
+  // Relier l'adresse à la socket
   bind_status = bind(socketfd, (struct sockaddr *) &server_addr, sizeof(server_addr));
   if (bind_status < 0 ) {
     perror("bind");
     return(EXIT_FAILURE);
   }
  
+  // Écouter les messages envoyés par le client
   listen(socketfd, 10);
+
+  //Lire et répondre au client
   recois_envoie_message(socketfd);
 
   return 0;

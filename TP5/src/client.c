@@ -15,11 +15,19 @@
 
 #include "client.h"
 
-/* envoi et reception de message
+/* 
+ * Fonction d'envoi et de réception de messages
+ * Il faut un argument : l'identifiant de la socket
  */
+
 int envoie_recois_message(int socketfd) {
+ 
   char data[1024];
+  // la réinitialisation de l'ensemble des données
   memset(data, 0, sizeof(data));
+
+
+  // Demandez à l'utilisateur d'entrer un message
   char message[100];
   printf("Votre message (max 1000 caracteres): ");
   fgets(message, 1024, stdin);
@@ -32,7 +40,11 @@ int envoie_recois_message(int socketfd) {
     exit(EXIT_FAILURE);
   }
 
+  // la réinitialisation de l'ensemble des données
   memset(data, 0, sizeof(data));
+
+
+  // lire les données de la socket
   int read_status = read(socketfd, data, sizeof(data));
   if ( read_status < 0 ) {
     perror("erreur lecture");
@@ -51,7 +63,7 @@ int main() {
   struct sockaddr_in server_addr, client_addr;
 
   /*
-   * Creation d'un socket
+   * Creation d'une socket
    */
   socketfd = socket(AF_INET, SOCK_STREAM, 0);
   if ( socketfd < 0 ) {
@@ -71,6 +83,8 @@ int main() {
     perror("connection serveur");
     exit(EXIT_FAILURE);
   }
+
+  // appeler la fonction pour envoyer un message au serveur
   envoie_recois_message(socketfd);
 
   close(socketfd);
