@@ -4,7 +4,7 @@
 
 # v1.0
 ===============================================================================
-Sujets de travaux pratiques de Programmation en C
+* Sujets de travaux pratiques de Programmation en C
 
 **Année**: 2020-2021
 
