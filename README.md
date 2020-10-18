@@ -112,6 +112,7 @@ commandes suivantes.
 
 ## Archives and Releases
 * [Zenodo](https://doi.org/10.5281/zenodo.4041298)
+* [Software Heritage](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/johnsamuelwrites/ProgC)
 * [Release Notes](RELEASE.md)
 
 ## Licence
