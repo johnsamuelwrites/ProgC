@@ -148,6 +148,22 @@ envoie_operateur_numeros (voir 6) pour calculer la somme total des
 notes de chaque étudiant ainsi que la moyenne de classe pour chaque
 sujet.
 
+Vous avez déjà implémenté la fonctionnalité permettant d'effectuer divers calculs comme l'addition,
+la multiplication côté serveur, mais en utilisant 2 nombres à la fois.
+
+Le but de l'exercice final est de calculer la somme de 5 notes et la moyenne pour chaque élève 
+et pour la classe de 5 élèves (les détails sont stockés dans le répertoire). 
+
+Sans aucune modification du côté serveur, vous devez assurer une série d'opérations côté client pour obtenir ces résultats
+
+Par exemple :
+```
++ note1 note2
++ note3 note4
+...
+/ somme 5
+```
+
 
 #### Fichiers
 
