@@ -31,6 +31,14 @@ de tous les exercices, vous serez captable de
 -   Exécuter les applications existantes sur la machine (e.g. GNU plot)
 -   Documenter et tester une application
 
+#### Environnement de programmation:
+- Système d'exploitation: Linux
+  - Ubuntu
+  - Machine virtuelle (VirtualBox) + Ubuntu
+- Compilateur: gcc
+- Logiciels: gnuplot
+  - Installation: sudo apt install gnuplot
+  
 #### Instructions
 
 1.  Tous les travaux pratiques sont basés sur les aspects que vous avez
