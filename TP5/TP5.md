@@ -156,7 +156,7 @@ et pour la classe de 5 élèves (les détails sont stockés dans le répertoire)
 
 Sans aucune modification du côté serveur, vous devez assurer une série d'opérations côté client pour obtenir ces résultats
 
-Par exemple :
+Par exemple, le client effectue une série d'appels suivants :
 ```
 + note1 note2
 + note3 note4
