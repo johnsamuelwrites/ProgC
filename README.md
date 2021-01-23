@@ -119,7 +119,7 @@ commandes suivantes.
 * John Samuel
 
 ## Archives and Releases
-* [Zenodo](https://doi.org/10.5281/zenodo.4041298)
+* [Zenodo](https://doi.org/10.5281/zenodo.4041297)
 * [Software Heritage](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/johnsamuelwrites/ProgC)
 * [Release Notes](RELEASE.md)
 
