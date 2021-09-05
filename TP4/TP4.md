@@ -130,7 +130,7 @@ insérez la couleur dans la liste. La fonction parcours prend le pointeur
 d'une liste de couleurs et affiche les couleurs dans la liste. Créez
 une liste de 10 couleurs et testez votre code en ajoutant dix couleurs
 en utilisant insertion(..) et parcourez votre liste en utilisant
-parcours(..). (BONUS pour implémenter une liste doublement chainée)
+parcours(..). 
 
 
 #### Fichiers

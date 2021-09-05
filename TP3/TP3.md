@@ -99,8 +99,7 @@ Vous devez afficher
 Ecrivez un programme *chercher.c* qui créer un tableau de 10 phrases (un
 tableau de tableau de caractères). Sans utilisant les fonctions de
 bibliothèques standards ou externes, cherchez si une phrase est dans le
-tableau ou pas. (BONUS, si vous utilisez char **, c'est-à-dire
-l'adresse d'une variable qui contient l'adresse d'une variable char)
+tableau ou pas. 
 
 
 #### Fichiers
