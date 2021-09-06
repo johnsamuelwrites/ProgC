@@ -11,9 +11,28 @@ Année: 2021-2022
 
  
 Créez un fichier *bonjour.c* et écrivez un programme qui affiche
-**"bonjour le monde!"** à l'écran. Compilez ce fichier en utilisant
-gcc et exécutez le code.
+**"bonjour le monde!"** à l'écran. 
 
+Compilez ce fichier en utilisant gcc et exécutez le code en exécutant les commandes suivantes sur le terminal.
+
+```
+$ gcc bonjour.c
+$ ./a.out
+```
+
+Vous pouvez également renommer votre exécutable en utilisant l'option '-o'.
+
+```
+$ gcc -o bonjour bonjour.c 
+$ ./bonjour
+```
+
+Pour voir tous les avertissements (*warnings*) pendant la compilation, vous pouvez utiliser les options `-Wall` et `-Wextra`.
+
+```
+$ gcc -Wall -o bonjour bonjour.c 
+$ ./bonjour
+```
 
 #### Exercice 1.2 [★]
 
@@ -25,9 +44,10 @@ a.  l'aire: Utilisez une variable **rayon** : float ou double
 
 b.  le périmètre: Utilisez une variable **rayon** : float ou double
 
-c.  Compilez *cercle.c* et créez un fichier éxecutable nommé cercle
 
-d.  Exécutez 'cercle'
+Compilez *cercle.c* et créez un fichier éxecutable nommé cercle
+
+Exécutez 'cercle'
 
 
 #### Exercice 1.3 [★]
@@ -53,8 +73,8 @@ vii. double
 viii. long double
 
 
-N'oubliez pas d'utiliser les versions signées et non-signées. Testez le
-programme (compilez et exécuter).
+N'oubliez pas d'utiliser les versions signées (`signed`) et non-signées (`unsigned`). Testez le
+programme (compilez et exécutez).
 
 
 #### Exercice 1.4 [★★]
@@ -80,7 +100,7 @@ vii. double
 viii. long double
 
 
-N'oubliez pas d'utiliser les versions signées et non-signées. Testez
+N'oubliez pas d'utiliser les versions signées (`signed`) et non-signées (`unsigned`). Testez
 le programme.
 
 
@@ -122,8 +142,7 @@ nouvelle version du code en utilisant **while** ou **do..while**.
  
 Ecrivez un programme *conditions.c* qui utilise les boucles (**for**,
 **while** ou **do..while**) et les branchements inconditionnels (break
-ou continue) pour l'affichage de numéros <= 1000 qui sont divisible par
-:
+ou continue) pour l'affichage de numéros <= 1000 qui sont divisible par:
 
 a.  2 et 15
 
@@ -148,14 +167,14 @@ premier exercice. Si c est égal à '+', le programme fait l'addition de
 deux variables **num1** et **num2**, si **op** est égal à '&', le
 programme fait l'opération ET etc. Rappelez-vous bien que l'on ne peut
 pas utiliser chaine de caractères comme condition en **switch**. Testez
-votre programme avec différents valeurs de **num1**, num2, **op**
+votre programme avec différents valeurs de **num1**, **num2**, **op**. 
 
 
 #### Exercice 1.9 [★★★]
 
  
 Ecrivez un programme *binaire.c* qui utilise **for** pour l'affichage
-d'une variable int en format binaire. Rappelez-vous bien que printf n'a
+d'une variable `int` en format binaire. Rappelez-vous bien que printf n'a
 pas de code de conversion comme x (l'affichage d'un numéro en notation
 hexadécimale) ou o (l'affichage d'un numéro en notation octale) pour
 l'affichage en notation binaire. Testez votre code avec les 5 numéros
