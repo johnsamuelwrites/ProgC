@@ -27,31 +27,31 @@ code du serveur. Sur l'autre, exécutez le code du client.
 #### Exercice 5.1 [★]
 
 
-Écrivez un programme en créant deux fichiers repertoire.h et
-repertoire.c qui utilisent l'interface en ligne de commande et prennent
+Écrivez un programme en créant deux fichiers *repertoire.h* et
+*repertoire.c* qui utilisent l'interface en ligne de commande et prennent
 le nom du répertoire.
 
 Ajoutez la déclaration suivante en repertoire.h
 ```
-              void lire_dossier(char *);             
+void lire_dossier(char *);             
 ```
 
-Implémentez cette fonction en repertoire.c qui parcourt le répertoire
+Implémentez cette fonction en *repertoire.c* qui parcourt le répertoire
 saisi par l'utilisateur et affiche les noms des fichiers (et
-répertoires, si aucun) dans ce répertoire. Vous pouvez utiliser opendir,
-readdir pour parcourir un répertoire.
+répertoires, si aucun) dans ce répertoire. Vous pouvez utiliser `opendir`,
+`readdir` pour parcourir un répertoire.
 
 
 #### Exercice 5.2 [★]
 
 
-Ajoutez la déclaration suivante en repertoire.h
+Ajoutez la déclaration suivante en *repertoire.h*
 
 ```
 void lire_dossier_recursif(char *);             
 ```
 
-Implémentez la fonction en repertoire.c qui parcourt le répertoire saisi
+Implémentez la fonction en *repertoire.c* qui parcourt le répertoire saisi
 par l'utilisateur en récursif et affiche tous les noms des
 fichiers, des répertoires, des sous-répertoires et des fichiers dans les
 sous-répertoires. Pour mieux comprendre cette question, testez
@@ -75,7 +75,7 @@ void lire_dossier_iteratif(char *);
 
 Implémentez cette fonction en repertoire.c qui parcourt le répertoire
 saisi par l'utilisateur en mode itératif et affiche tous les noms de
-tous les fichiers et répertoires, sous-répertoires et tous les fichiers
+des fichiers, des répertoires, des sous-répertoires et des fichiers
 dans les sous-répertoires. Mais cette fois, utilisez for (ou while ou
 do..while) pour implémenter cette fonction. Testez votre code.
 
@@ -83,8 +83,8 @@ do..while) pour implémenter cette fonction. Testez votre code.
 #### Exercice 5.4 [★★]
 
 
-Téléchargez les fichiers suivants à partir d'e-campus : client.h,
-client.c, serveur.h, serveur.c, Makefile. Lisez bien tous les fichiers.
+Téléchargez les fichiers suivants à partir d'e-campus : *client.h*,
+*client.c*, *serveur.h*, *serveur.c*, *Makefile*. Lisez bien tous les fichiers.
 Exécutez
 
 ```
@@ -107,7 +107,7 @@ et sur le second terminal
 
 Entrez un message et voyez les affichages sur les deux terminaux.
 
-Modifiez la fonction recois_envoie_message (serveur.c). Quand le
+Modifiez la fonction `recois_envoie_message` (*serveur.c*). Quand le
 serveur reçoit un message, il demande à l'utilisateur de saisir un
 message et envoie ce message au client. Testez votre code. N'oubliez pas
 d'utiliser make (pour la compilation et la génération des fichiers
@@ -119,10 +119,12 @@ exécutables).
 
 Vous avez remarqué les premiers caractères dans chaque message :
 'message' suivi par :. Pour votre prochaine question, on utilisera
-calcule. Modifiez les fichiers client.c et serveur.c pour le support des
+calcule. 
+
+Modifiez les fichiers client.c et serveur.c pour le support des
 calculs simples (+,-,*,...). Ajoutez une fonction
-envoie_operateur_numeros(...) dans le fichier client.c et
-recois_numeros_calcule(...) dans le fichier serveur.c. Le client
+`envoie_operateur_numeros(...)` dans le fichier client.c et
+`recois_numeros_calcule(...)` dans le fichier serveur.c. Le client
 envoie l'opérateur et un (ou deux) numéros et le serveur envoie le
 résultat. Par exemple, si le client envoie le message
 
