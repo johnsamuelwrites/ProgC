@@ -9,11 +9,6 @@ Sujets de travaux pratiques de Programmation en C
 * [TP4](TP4/TP4.md)
 * [TP5](TP5/TP5.md)
 * [TP6](TP6/TP6.md)
-* [TP7](TP7/TP7.md)
-
-### Deuxième session
-* [Projet](Session2/Projet.md)
-
 
 #### Objectifs
 

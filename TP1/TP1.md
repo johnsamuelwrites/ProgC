@@ -177,7 +177,7 @@ opérateurs.c, sizeof_types.c, variables.c*
 
 -   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs
     etc.)
--   Créer README et ajouter les détails concernant votre premier
+-   Créez un fichier README et ajoutez les détails concernant votre premier
     exercice.
 
 #### Exemple

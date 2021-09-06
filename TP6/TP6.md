@@ -8,10 +8,18 @@ Année: 2021-2022
 -   Compréhension et modification du code, manipulation des images, et
     exécution des applications existantes sur la machine (Par exemple,
     gnuplot)
+-   Compréhension et modification du code, manipulation des images, et
+    exécution des applications existantes sur la machine (Par exemple,
+    gnuplot)
+
 
 ### BMP (format d'image)
 
 Référence : <https://fr.wikipedia.org/wiki/Windows_bitmap>
+
+### JSON
+
+Référence : <https://fr.wikipedia.org/wiki/JavaScript_Object_Notation>
 
 #### Exercice 6.1 [★]
 
@@ -59,6 +67,42 @@ travailler avec dix premières couleurs. Modifiez les deux fichiers de
 manière à ce que ce nombre de couleurs (toujours \<=30) soit saisi par
 l'utilisateur. Testez votre code. N'oubliez pas d'utiliser make.
 
+#### Exercice 6.3 [★★★]
+
+
+Vous avez remarqué que nous avons utilisé les messages très simples
+entre client et serveur
+
+```              
+message: bonjour             
+```
+
+par exemple
+
+```              
+calcule: + 23 45              
+couleurs: 10, #0effeee,...             
+```
+
+Modifiez le code client.c et serveur.c et ajoutez de nouvelles fonctions
+pour travailler avec le format de messages JSON. Par exemple,
+
+```              
+{                
+  "code" : "message",                
+  "valeurs" : [ "bonjour"]              
+}
+
+{ 
+  "code" : "calcule",                
+  "valeurs" : [ "+", "23", "45" ]              
+}              
+
+{                
+   "code" : "couleurs",                
+   "valeurs" : [ "0effeee", ...]              
+}             
+```
 
 #### Fichiers
 
