@@ -8,9 +8,6 @@ Année: 2021-2022
 -   Compréhension et modification du code, manipulation des images, et
     exécution des applications existantes sur la machine (Par exemple,
     gnuplot)
--   Compréhension et modification du code, manipulation des images, et
-    exécution des applications existantes sur la machine (Par exemple,
-    gnuplot)
 
 
 ### BMP (format d'image)
