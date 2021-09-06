@@ -67,9 +67,9 @@ serveur.c, serveur.h
 
 #### Instructions
 
--   Ne pas oublier les commentaires (nom de fichier, objectif, auteurs,
+-   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs,
     , les lignes importantes de code etc.). Les commentaires sont notés.
--   N'oublier pas de mettre à jour le fichier README et ajouter les
+-   N'oubliez pas de mettre à jour le fichier README et ajouter les
     détails concernant votre deuxième exercice.
 -   Compte rendu en format .zip en un seul fichier.
 

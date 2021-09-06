@@ -59,8 +59,7 @@ initialise et affiche les détails de ces cinq étudiant.e.es. Pour chaque
 ses notes dans 2 modules (Programmation en C, Système d'exploitation).
 
 
-#### Exercice 2.6 [★★]
-
+#### Exercice 2.6 [★★] 
 
 Écrivez un programme *etudiant2.c* pour la gestion de données
 étudiant.e.es (5 étudiant.e.es) en utilisant struct. Les détails pour
@@ -73,8 +72,10 @@ noms, prénoms etc.
 
 
 Une couleur en format RGBA contient 4 valeurs : rouge (R), vert (G),
-bleu (B) et alpha (A). Chaque valeur est un octet. Créez un programme
-*couleurs.c* en utilisant struct. Ensuite, créer et initialiser un
+bleu (B) et alpha (A). Chaque valeur est un octet. 
+
+Créez un programme *couleurs.c* en utilisant struct. 
+Ensuite, créez et initialiser un
 tableau de 10 couleurs. Pensez à initialiser les coleurs en notation
 hexadécimale (r : 0xef, g : 0x78 etc.).
 
@@ -82,7 +83,7 @@ hexadécimale (r : 0xef, g : 0x78 etc.).
 #### Exercice 2.8 [★★]
 
 
-Réutiliser le programme *variables.c* et créez un programme
+Réutilisez le programme *variables.c* et créez un programme
 *ptrvariables.c* qui affecte et affiche les valeurs des variables de
 différents types de base (char, short, int, long int, long long int,
 float, double, long double) en utilisant leurs adresses. N'oubliez pas
@@ -113,9 +114,9 @@ ptrvariables.c, puissance.c, tableauptr.c*
 
 #### Instructions
 
--   Ne pas oublier les commentaires (nom de fichier, objectif, auteurs,
+-   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs,
     , les lignes importantes de code etc.). Les commentaires sont notés.
--   N'oublier pas de mettre à jour le fichier README et ajouter les
+-   N'oubliez pas de mettre à jour le fichier README et ajouter les
     détails concernant votre deuxième exercice.
 -   Compte rendu en format .zip en un seul fichier.
 

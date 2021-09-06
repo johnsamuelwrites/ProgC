@@ -37,7 +37,7 @@ Ajoutez la déclaration suivante en repertoire.h
 ```
 
 Implémentez cette fonction en repertoire.c qui parcourt le répertoire
-saisi par l'utilisateur et affiche les noms de tous les fichiers (et
+saisi par l'utilisateur et affiche les noms des fichiers (et
 répertoires, si aucun) dans ce répertoire. Vous pouvez utiliser opendir,
 readdir pour parcourir un répertoire.
 
@@ -52,8 +52,8 @@ void lire_dossier_recursif(char *);
 ```
 
 Implémentez la fonction en repertoire.c qui parcourt le répertoire saisi
-par l'utilisateur en récursif et affiche tous les noms de tous les
-fichiers et répertoires, sous-répertoires et tous les fichiers dans les
+par l'utilisateur en récursif et affiche tous les noms des
+fichiers, des répertoires, des sous-répertoires et des fichiers dans les
 sous-répertoires. Pour mieux comprendre cette question, testez
 
 ```
@@ -172,9 +172,9 @@ serveur.h*
 
 #### Instructions
 
--   Ne pas oublier les commentaires (nom de fichier, objectif, auteurs,
+-   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs,
     , les lignes importantes de code etc.). Les commentaires sont notés.
--   N'oublier pas de mettre à jour le fichier README et ajouter les
+-   N'oubliez pas de mettre à jour le fichier README et ajouter les
     détails concernant votre deuxième exercice.
 -   Compte rendu en format .zip en un seul fichier.
 

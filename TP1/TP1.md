@@ -53,7 +53,7 @@ vii. double
 viii. long double
 
 
-Ne pas oubliez d'utiliser les versions signées et non-signées. Testez le
+N'oubliez pas d'utiliser les versions signées et non-signées. Testez le
 programme (compilez et exécuter).
 
 
@@ -175,9 +175,9 @@ opérateurs.c, sizeof_types.c, variables.c*
 
 #### Instructions
 
--   Ne pas oubliez les commentaires (nom de fichier, objectif, auteurs
+-   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs
     etc.)
--   Créez README et ajoutez les détails concernant votre premiez
+-   Créer README et ajouter les détails concernant votre premier
     exercice.
 
 #### Exemple
