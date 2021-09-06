@@ -207,11 +207,12 @@ opérateurs.c, sizeof_types.c, variables.c*
 ```             
  1. NOM Prénom
  2. NOM Prénom
-`
+```             
+
 
 ##### README
 
-`             
+```             
 # Bibliothèques:               
 * stdio.h               
 * ..              
@@ -229,6 +230,3 @@ opérateurs.c, sizeof_types.c, variables.c*
 * commentaire 2               
 * ..             
 ```
-
-
-
