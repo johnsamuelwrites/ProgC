@@ -37,7 +37,7 @@ $ ./bonjour
 #### Exercice 1.2 [★]
 
  
-Ecrivez un programme *cercle.c* qui calcule l'aire et le périmètre d'un
+Écrivez un programme *cercle.c* qui calcule l'aire et le périmètre d'un
 cercle
 
 a.  l'aire: Utilisez une variable `rayon` : float ou double
@@ -53,7 +53,7 @@ Exécutez 'cercle'
 #### Exercice 1.3 [★]
 
  
-Ecrivez un programme *sizeof_types.c* qui affiche la taille des
+Écrivez un programme *sizeof_types.c* qui affiche la taille des
 différents types de base (en octets) :
 
 i.  char
@@ -80,7 +80,7 @@ programme (compilez et exécutez).
 #### Exercice 1.4 [★★]
 
  
-Ecrivez un programme *variables.c* qui affecte et affiche les valeurs
+Écrivez un programme *variables.c* qui affecte et affiche les valeurs
 des variables des différents types de base :
 
 i.  char
@@ -107,7 +107,7 @@ le programme.
 #### Exercice 1.5 [★★]
 
  
-Ecrivez un programme *opérateurs.c* qui utilise deux variables
+Écrivez un programme *opérateurs.c* qui utilise deux variables
 suivantes:
 
 i.  `a` = 16
@@ -120,7 +120,7 @@ et testez les différents opérateurs arithmétiques et logiques.
 #### Exercice 1.6 [★★]
 
  
-Ecrivez un programme *boucles.c* qui utilise `for`, # et * et qui
+Écrivez un programme *boucles.c* qui utilise `for`, # et * et qui
 affiche un triangle rectangle. La taille du triangle est dependent de la
 valeur de la variable `compter` (`compter` < 4 inacceptable).
 Exemple, si `compter` = 5, le programme affiche
@@ -133,14 +133,14 @@ Exemple, si `compter` = 5, le programme affiche
 * * * * *
 ```
 
-Testez le code avec les différentes valeurs de compter. Ecrivez une
+Testez le code avec les différentes valeurs de compter. Écrivez une
 nouvelle version du code en utilisant `while` ou `do..while`.
 
 
 #### Exercice 1.7 [★★]
 
  
-Ecrivez un programme *conditions.c* qui utilise les boucles (`for`,
+Écrivez un programme *conditions.c* qui utilise les boucles (`for`,
 `while` ou `do..while`) et les branchements inconditionnels (break
 ou continue) pour l'affichage de numéros <= 1000 qui sont divisible par:
 
@@ -155,7 +155,7 @@ c.  7 ou 5, mais pas par 3
 #### Exercice 1.8 [★★★]
 
  
-Ecrivez un programme *opérateurs2.c* qui utilise trois variables
+Écrivez un programme *opérateurs2.c* qui utilise trois variables
 
 1.  `num1` (entier)
 2.  `num2` (entier)
@@ -173,7 +173,7 @@ votre programme avec différents valeurs de `num1`, `num2`, `op`.
 #### Exercice 1.9 [★★★]
 
  
-Ecrivez un programme *binaire.c* qui utilise `for` pour l'affichage
+Écrivez un programme *binaire.c* qui utilise `for` pour l'affichage
 d'une variable `int` en format binaire. Rappelez-vous bien que printf n'a
 pas de code de conversion comme x (l'affichage d'un numéro en notation
 hexadécimale) ou o (l'affichage d'un numéro en notation octale) pour

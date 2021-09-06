@@ -11,7 +11,7 @@ Année: 2021-2022
 
 
 Vous êtes sur une machine de 64 bits et vous utilisez également un
-système d'exploitation 64 bits. Ecrivez un programme *sizeof.c* et
+système d'exploitation 64 bits. Écrivez un programme *sizeof.c* et
 testez le code suivant. Quelle est la valeur renvoyée par chacune des
 lignes suivantes ?
 
@@ -96,7 +96,7 @@ Vous devez afficher
 #### Exercice 3.8 [★★★]
 
 
-Ecrivez un programme *chercher.c* qui créer un tableau de 10 phrases (un
+Écrivez un programme *chercher.c* qui créer un tableau de 10 phrases (un
 tableau de tableau de caractères). Sans utilisant les fonctions de
 bibliothèques standards ou externes, cherchez si une phrase est dans le
 tableau ou pas. 
