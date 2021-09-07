@@ -30,7 +30,7 @@ $ ./bonjour
 Pour voir tous les avertissements (*warnings*) pendant la compilation, vous pouvez utiliser les options `-Wall` et `-Wextra`.
 
 ```
-$ gcc -Wall -o bonjour bonjour.c 
+$ gcc -Wall -Wextra -o bonjour bonjour.c 
 $ ./bonjour
 ```
 
