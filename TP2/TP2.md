@@ -53,8 +53,8 @@ string.h), écrivez le code *chaine.c* qui
 
 
 Imaginez que vous gérez les notes de cinq étudiant.e.es. En utilisant
-seulement des tableaux, écrivez un programme *etudiant.c* qui déclare,
-initialise et affiche les détails de ces cinq étudiant.e.es. Pour chaque
+uniquement des tableaux, écrivez un programme *etudiant.c* qui déclare,
+initialise et affiche les détails des cinq étudiant.e.es. Pour chaque
 étudiant.e, on est intéressé par son nom, son prénom, son adresse, et
 ses notes dans 2 modules (Programmation en C, Système d'exploitation).
 
@@ -64,7 +64,7 @@ ses notes dans 2 modules (Programmation en C, Système d'exploitation).
 Écrivez un programme *etudiant2.c* pour la gestion de données
 étudiant.e.es (5 étudiant.e.es) en utilisant struct. Les détails pour
 chaque étudiant.e restent les mêmes comme pour l'exercice précédente
-(nom, prénom etc.). Vous pouvez utiliser strcpy pour initialiser les
+(nom, prénom etc.). Vous pouvez utiliser `strcpy` pour initialiser les
 noms, prénoms etc.
 
 
@@ -75,7 +75,7 @@ Une couleur en format RGBA contient 4 valeurs : rouge (R), vert (G),
 bleu (B) et alpha (A). Chaque valeur est un octet. 
 
 Créez un programme *couleurs.c* en utilisant struct. 
-Ensuite, créez et initialiser un
+Ensuite, créez et initialisez un
 tableau de 10 couleurs. Pensez à initialiser les coleurs en notation
 hexadécimale (r : 0xef, g : 0x78 etc.).
 
