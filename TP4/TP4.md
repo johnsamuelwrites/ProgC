@@ -17,10 +17,10 @@ déclarez les fonctions suivantes : somme, différence, produit, quotient,
 modulo, 'et', ou et négation qui utilisent deux variables num1
 (entier), num2 (entier). Implémentez ces fonctions dans *operator.c*.
 Pour l'opérateur négation, utilisez seulement un numéro. Considérez une
-variable op qui contient un de ces différents opérateurs. (+, -, *, /,
+variable op qui contient un de ces différents opérateurs. (+, -, \*, /,
 %, &, |, ~). Utilisez switch et réutilisez le code de votre TP2, mais
 cette fois, si op est égal à '+', le programme doit appeler la fonction
-'somme' etc. Testez votre programme avec différentes valeurs de num1,
+'somme' etc. Écrivez un programme *main.c* et testez votre programme avec différentes valeurs de num1,
 num2, op.
 
 
@@ -29,10 +29,11 @@ num2, op.
  
 Écrivez un programme en créant deux fichiers *fichier.c* et fichier.h.
 Dans fichier.h, déclarez les fonctions lire_fichier(char
-*nom_de_fichier) et ecrire_dans_fichier(char *nom_de_fichier,
-char *message). La fonction lire_fichier prend le nom du fichier et
+\*nom_de_fichier) et ecrire_dans_fichier(char \*nom_de_fichier,
+char \*message). La fonction lire_fichier prend le nom du fichier et
 affiche son contenu à l'écran. ecrire_dans_fichier prend le nom du
 fichier et écrire le message saisi par l'utilisateur dans le fichier.
+Testez ces fonctions en utilisant le fichier principal (*main.c*).
 
 
 #### Exercice 4.3 [★★]
@@ -131,7 +132,7 @@ d'une liste de couleurs et affiche les couleurs dans la liste. Créez
 une liste de 10 couleurs et testez votre code en ajoutant dix couleurs
 en utilisant insertion(..) et parcourez votre liste en utilisant
 parcours(..). 
-
+Testez ces fonctions en utilisant le fichier principal (*main.c*).
 
 #### Fichiers
 
