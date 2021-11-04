@@ -156,7 +156,7 @@ la multiplication côté serveur, mais en utilisant 2 nombres à la fois.
 Le but de l'exercice final est de calculer la somme de 5 notes et la moyenne pour chaque élève 
 et pour la classe de 5 élèves (les détails sont stockés dans le répertoire). 
 
-Sans aucune modification du côté serveur, vous devez assurer une série d'opérations côté client pour obtenir ces résultats
+Vous devez assurer une série d'opérations côté client pour obtenir ces résultats
 
 Par exemple, le client effectue une série d'appels suivants :
 ```
@@ -166,6 +166,9 @@ Par exemple, le client effectue une série d'appels suivants :
 / somme 5
 ```
 
+Vous devrez modifier le serveur pour qu'il puisse lire et répondre aux messages du client dans une boucle infinie.  
+
+Pour cet exercice, le serveur ne doit pas lire d'informations provenant des fichiers de l'élève. Le but du serveur est d'effectuer des calculs arithmétiques simples. Seul le client peut lire les fichiers relatifs aux notes des élèves et envoyer une série de messages au serveur pour obtenir la somme totale, la moyenne, etc. 
 
 #### Fichiers
 
