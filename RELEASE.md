@@ -1,3 +1,8 @@
+# v1.5
+===============================================================================
+* Mettre à jour et ajouter plus de précisions dans les programmes
+* Ajouter des clarifications
+
 # v1.4
 ===============================================================================
 * Correct typos and errors 
