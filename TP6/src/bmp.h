@@ -11,12 +11,13 @@
 #include <stdint.h>
 #include "couleur.h"
 
-//Reference: http://www.ue.eti.pg.gda.pl/fpgalab/zadania.spartan3/zad_vga_struktura_pliku_bmp_en.html
-//https://stackoverflow.com/questions/14279242/read-bitmap-file-into-structure
+// Reference: http://www.ue.eti.pg.gda.pl/fpgalab/zadania.spartan3/zad_vga_struktura_pliku_bmp_en.html
+// https://stackoverflow.com/questions/14279242/read-bitmap-file-into-structure
 
-//Structure de données d'une image bmp (en-tête)
+// Structure de données d'une image bmp (en-tête)
 #pragma pack(push, 1)
-typedef struct {
+typedef struct
+{
   uint16_t type;
   uint32_t file_size;
   uint16_t reserved1;
@@ -25,9 +26,10 @@ typedef struct {
 } bmp_header;
 #pragma pack(pop)
 
-//Structure de données d'une image bmp (en-tête): détails (taille etc.)
+// Structure de données d'une image bmp (en-tête): détails (taille etc.)
 #pragma pack(push, 1)
-typedef struct {
+typedef struct
+{
   uint32_t info_header_size;
   uint32_t largeur;
   uint32_t hauteur;
@@ -43,5 +45,5 @@ typedef struct {
 #pragma pack(pop)
 
 // analyse d'un fichier bmp (compter et trier)
-couleur_compteur * analyse_bmp_image(char *);
+couleur_compteur *analyse_bmp_image(char *);
 #endif

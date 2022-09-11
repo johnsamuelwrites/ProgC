@@ -13,7 +13,7 @@
  */
 #define PORT 8089
 
-/* 
+/*
  * Fonction d'envoi et de réception de messages
  * Il faut un argument : l'identifiant de la socket
  */
