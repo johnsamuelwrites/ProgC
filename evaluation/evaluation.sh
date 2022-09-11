@@ -24,7 +24,7 @@ compile_files_in_directory (){
     else
       echo "                                       Compiling $filename                                      "
       gcc -c $filename # Compile to check for errors
-      gcc -c -Wall -Werror $filename # Compile to check for errors
+      gcc -c -Wall -Werror -Wextra $filename # Compile to check for errors
       rm -f *.o *.gch src/*.o src/*.gch
     fi
   done

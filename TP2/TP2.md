@@ -30,7 +30,7 @@ les deux bits sont 1, il affiche 1 sinon 0.
 
 La suite de Fibonacci est une suite d'entiers définie comme suit :
 
--   U0=1
+-   U0=0
 -   U1=1
 -   Un= Un-1 + Un-2
 
@@ -89,6 +89,22 @@ différents types de base (char, short, int, long int, long long int,
 float, double, long double) en utilisant leurs adresses. N'oubliez pas
 d'afficher l'adresse et la valeur de ces variables avant ou après la
 manipulation par leurs adresses (en utilisant les pointeurs).
+
+Par exemple, vous avez les deux variables suivantes:
+```
+   int i = 0xa47865ff; 
+   float f = 1;
+```
+
+Vous devez afficher les valeurs des octets en hexadécimal,
+comme indiqué ci-dessous
+```
+   i : a4 78 65 ff; 
+   f : 40 0 0 0
+```
+
+Pour plus d'informations sur la manière dont les nombres réels sont stockés dans les variables float et double, consultez la norme IEEE 754.
+
 
 
 #### Exercice 2.9 [★★★]

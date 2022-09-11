@@ -76,8 +76,15 @@ short, int, long int, float, double et long double.
 
 
 En réutilisant le code de *couleurs.c*, écrivez un programme
-*couleur_compteur.c* avec un tableau de 100 couleurs. Par exemple, si
-le tableau contient les couleurs suivantes:
+*couleur_compteur.c* qui stocke 100 couleurs dans un tableau
+et qui affiche les couleurs distinctes et leur nombre dans le tableau. 
+
+Pour cet exercice, il y a trois étapes principales :
+1. Tout d'abord, créez une structure pour stocker les détails d'une couleur : R, G, B et A
+2. Créez un tableau de 100 couleurs en utilisant la structure ci-dessus.
+3. Comptez le nombre de couleurs distinctes.
+
+Par exemple, si le tableau contient les couleurs suivantes:
 
 ```
 0xff 0x23 0x23 0x45              
@@ -92,6 +99,7 @@ Vous devez afficher
 0xff 0x00 0x23 0x12 1.             
 ```
 
+Vous pouvez créer une nouvelle structure pour stocker les couleurs distinctes et leur compte. 
 
 #### Exercice 3.8 [★★★]
 

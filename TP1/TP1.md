@@ -122,8 +122,8 @@ et testez les différents opérateurs arithmétiques et logiques.
  
 Écrivez un programme *boucles.c* qui utilise `for`, # et * et qui
 affiche un triangle rectangle. La taille du triangle est dependent de la
-valeur de la variable `compter` (`compter` < 4 inacceptable).
-Exemple, si `compter` = 5, le programme affiche
+valeur de la variable `compteur` (`compteur` < 4 inacceptable).
+Exemple, si `compteur` = 5, le programme affiche
 
 ```
 *              
@@ -133,7 +133,7 @@ Exemple, si `compter` = 5, le programme affiche
 * * * * *
 ```
 
-Testez le code avec les différentes valeurs de compter. Écrivez une
+Testez le code avec les différentes valeurs de `compteur`. Écrivez une
 nouvelle version du code en utilisant `while` ou `do..while`.
 
 

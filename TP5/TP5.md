@@ -170,6 +170,7 @@ Vous devrez modifier le serveur pour qu'il puisse lire et répondre aux messages
 
 Pour cet exercice, le serveur ne doit pas lire d'informations provenant des fichiers de l'élève. Le but du serveur est d'effectuer des calculs arithmétiques simples. Seul le client peut lire les fichiers relatifs aux notes des élèves et envoyer une série de messages au serveur pour obtenir la somme totale, la moyenne, etc. 
 
+
 #### Fichiers
 
 *client.c, client.h, Makefile, repertoire.c, repertoire.h, serveur.c,
