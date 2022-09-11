@@ -151,7 +151,6 @@ static int compare_compteur (const void *ccp1, const void *ccp2, void *compte_bi
     else if (cc241->compte > cc242->compte) {
       return 1;
     }
-    return -1;
   }
   else if (*bc == BITS32) {
     couleur32_compteur *cc321 = (couleur32_compteur *) ccp1;
@@ -162,8 +161,8 @@ static int compare_compteur (const void *ccp1, const void *ccp2, void *compte_bi
     else if (cc321->compte > cc322->compte) {
       return 1;
     }
-    return -1;
   }
+  return -1;
 }
 
 //trier le compte de couleurs distincts

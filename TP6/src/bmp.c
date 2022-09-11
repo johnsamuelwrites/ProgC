@@ -70,7 +70,6 @@ couleur_compteur * analyse_bmp_image(char *nom_de_fichier) {
       return(NULL);
     }
 
-    int ccsize;
     couleur c;
     c.compte_bit = BITS32;
     c.c.c32 = c32;
@@ -86,7 +85,6 @@ couleur_compteur * analyse_bmp_image(char *nom_de_fichier) {
       return(NULL);
     }
 
-    int ccsize;
     couleur c;
     c.compte_bit = BITS24;
     c.c.c24 = c24;

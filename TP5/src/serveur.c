@@ -25,6 +25,7 @@ int renvoie_message(int client_socket_fd, char *data) {
     perror("erreur ecriture");
     return(EXIT_FAILURE);
   }
+  return(EXIT_SUCCESS);
 }
 
 /* accepter la nouvelle connection d'un client et lire les données
@@ -35,7 +36,7 @@ int recois_envoie_message(int socketfd) {
   struct sockaddr_in client_addr;
   char data[1024];
 
-  int client_addr_len = sizeof(client_addr);
+  unsigned int client_addr_len = sizeof(client_addr);
  
   // nouvelle connection de client
   int client_socket_fd = accept(socketfd, (struct sockaddr *) &client_addr, &client_addr_len);
@@ -70,15 +71,15 @@ int recois_envoie_message(int socketfd) {
 
   //fermer le socket 
   close(socketfd);
+  return (EXIT_SUCCESS);
 }
 
 int main() {
 
   int socketfd;
   int bind_status;
-  int client_addr_len;
 
-  struct sockaddr_in server_addr, client_addr;
+  struct sockaddr_in server_addr;
 
   /*
    * Creation d'une socket
