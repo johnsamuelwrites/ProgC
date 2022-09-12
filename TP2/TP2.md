@@ -7,6 +7,11 @@ Année: 2021-2022
 
 -   Comprendre les opérateurs, les tableaux, les pointeurs et les
     structures.
+-   Créer, lire et manipuler des chaînes de caractères sans utiliser 
+    les bibliothèques standards ou externes.
+-   Créer, lire et manipuler des structures de données construites à l'aide de `struct`
+-   Créer, lire et manipuler des tableaux
+-   Lire et manipuler des variables en utilisant des pointeurs
 
 #### Exercice 2.1 [★]
 

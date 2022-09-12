@@ -6,6 +6,9 @@ Année: 2021-2022
 #### Objectifs
 
 -   Ecrire, compiler et exécuter les programmes C.
+-   Utiliser des variables
+-   Utiliser différents types de base.
+-   Utiliser des opérateurs arithmétiques, logiques et de manipulation de bits. 
 
 #### Exercice 1.1 [★]
 
@@ -45,9 +48,9 @@ a.  l'aire: Utilisez une variable `rayon` : float ou double
 b.  le périmètre: Utilisez une variable `rayon` : float ou double
 
 
-Compilez *cercle.c* et créez un fichier éxecutable nommé cercle
+Compilez *cercle.c* et créez un fichier éxecutable nommé cercle.
 
-Exécutez 'cercle'
+Exécutez 'cercle'.
 
 
 #### Exercice 1.3 [★]
@@ -196,13 +199,13 @@ opérateurs.c, sizeof_types.c, variables.c*
 
 -   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs
     etc.)
--   Créez un fichier README et ajoutez les détails concernant votre premier
+-   Créez un fichier README.md et ajoutez les détails concernant votre premier
     exercice.
 
 #### Exemple
 
  
-##### CONTRIBUTORS
+##### CONTRIBUTORS.md
 
 ```             
  1. NOM Prénom
@@ -210,7 +213,7 @@ opérateurs.c, sizeof_types.c, variables.c*
 ```             
 
 
-##### README
+##### README.md
 
 ```             
 # Bibliothèques:               
