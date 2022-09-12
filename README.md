@@ -1,7 +1,7 @@
 # ProgC
 Sujets de travaux pratiques du module **Programmation en C**
 
-## Année: 2021-2022
+## Année: 2022-2023
 ###  Sujets de travaux pratiques
 * [TP1](TP1/TP1.md)
 * [TP2](TP2/TP2.md)
@@ -112,7 +112,8 @@ commandes suivantes.
           $ cd ProgC
           $ ls
 ```
-Et pour les dernières modifications:
+
+Pour obtenir les dernières mises à jour du répertoire, vous pouvez exécuter la commande suivante
 
 ```
           $ git pull
@@ -122,6 +123,7 @@ Et pour les dernières modifications:
 - Aucune soumission par courriel électronique.
 - Les liens vers des sites externes comme GitHub/GitLab,... ne seront pas acceptés. 
 - Seules les soumissions complètes sur E-Campus seront acceptées pour l'évaluation.
+- Ne pas modifier les noms de fichiers.
 
 # Author
 * John Samuel
