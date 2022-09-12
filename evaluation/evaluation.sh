@@ -10,21 +10,30 @@ verify_if_not_empty_file (){
   fi
 }
 
+verify_code (){
+  local directory=$1
+  local filename=$2
+  echo "                                       Verifying $directory/$filename                                         "
+  # Internal code
+}
+
 compile_files_in_directory (){
-  filelist=$1
+  local directory=$1
+  local filelist=$2
   IFS=";" read -r -a files <<< "${filelist}"
   for file in "${files[@]}";
   do
-    filename="src/$file"
+    local filename="src/$file"
     verify_if_not_empty_file "$filename"
-    value=$?
+    local value=$?
     if [ "$value" = 1 ]
     then  
-      echo "                                       Empty C file: $filename                                  "
+      echo "                                       Empty C file: $directory/$filename                                  "
     else
-      echo "                                       Compiling $filename                                      "
+      echo "                                       Compiling $directory/$filename                                      "
       gcc -c $filename # Compile to check for errors
       gcc -c -Wall -Werror -Wextra $filename # Compile to check for errors
+      verify_code $directory $filename
       rm -f *.o *.gch src/*.o src/*.gch
     fi
   done
@@ -61,16 +70,20 @@ do
   if [ "$value" = 1 ]
   then  
      echo "Empty CONTRIBUTORS.md file"
-   fi
+  else
+     verify_code $directory "CONTRIBUTORS.md"
+  fi
 
   verify_if_not_empty_file "README.md"
   value=$?
   if [ "$value" = 1 ]
   then  
-     echo "Empty CONTRIBUTORS.md file"
-   fi
+     echo "Empty README.md file"
+  else
+     verify_code $directory "README.md"
+  fi
   
-  compile_files_in_directory ${filelist}
+  compile_files_in_directory $directory ${filelist}
   cd "../evaluation"
 done
 echo "================================================================================================"
