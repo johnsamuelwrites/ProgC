@@ -7,9 +7,6 @@ Année: 2021-2022
 
 -   Comprendre la programmation client-serveur.
 
-
-![](../images/client-server.svg)
-
 #### Exercice 5.1 [★]
 
 
@@ -81,6 +78,8 @@ répond aux requêtes d'autres programmes appelés clients. Par exemple,
 
 Référence : <https://fr.wikipedia.org/wiki/Client-serveur>
 
+![](../images/client-server.svg)
+
 Pour simuler un environnement client-serveur, on va utiliser une seule
 machine en lançant deux terminaux. Sur un des deux terminaux exécutez le
 code du serveur. Sur l'autre, exécutez le code du client.
@@ -115,7 +114,7 @@ message et envoie ce message au client. Testez votre code. N'oubliez pas
 d'utiliser make (pour la compilation et la génération des fichiers
 exécutables).
 
-![](./images/client-server-message.svg)
+![](../images/client-server-message.svg)
 
 #### Exercice 5.5 [★★★]
 
