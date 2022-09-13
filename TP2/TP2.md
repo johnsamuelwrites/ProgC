@@ -125,8 +125,8 @@ Utilisez les pointeurs.
 
 #### Astuce
 
--   Pour l'exercice 2.5, pensez à utiliser *(s+i) etc (e.g, si s est
-    un pointeur de type int *).
+-   Pour l'exercice 2.5, pensez à utiliser \*(s+i) etc (e.g, si s est
+    un pointeur de type int \*).
 
 #### Fichiers
 
@@ -137,7 +137,7 @@ ptrvariables.c, puissance.c, tableauptr.c*
 
 -   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs,
     , les lignes importantes de code etc.). Les commentaires sont notés.
--   N'oubliez pas de mettre à jour le fichier README et ajouter les
+-   N'oubliez pas de mettre à jour le fichier README.md et ajouter les
     détails concernant votre deuxième exercice.
 -   Compte rendu en format .zip en un seul fichier.
 

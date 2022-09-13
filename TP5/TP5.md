@@ -24,6 +24,8 @@ Pour simuler un environnement client-serveur, on va utiliser une seule
 machine en lançant deux terminaux. Sur un des deux terminaux exécutez le
 code du serveur. Sur l'autre, exécutez le code du client.
 
+![](../images/client-server.svg)
+
 #### Exercice 5.1 [★]
 
 
@@ -122,7 +124,7 @@ Vous avez remarqué les premiers caractères dans chaque message :
 calcule. 
 
 Modifiez les fichiers client.c et serveur.c pour le support des
-calculs simples (+,-,*,...). Ajoutez une fonction
+calculs simples (+,-,\*,...). Ajoutez une fonction
 `envoie_operateur_numeros(...)` dans le fichier client.c et
 `recois_numeros_calcule(...)` dans le fichier serveur.c. Le client
 envoie l'opérateur et un (ou deux) numéros et le serveur envoie le
@@ -180,7 +182,7 @@ serveur.h*
 
 -   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs,
     , les lignes importantes de code etc.). Les commentaires sont notés.
--   N'oubliez pas de mettre à jour le fichier README et ajouter les
+-   N'oubliez pas de mettre à jour le fichier README.md et ajouter les
     détails concernant votre deuxième exercice.
 -   Compte rendu en format .zip en un seul fichier.
 
