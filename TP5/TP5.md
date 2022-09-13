@@ -7,22 +7,6 @@ Année: 2021-2022
 
 -   Comprendre la programmation client-serveur.
 
-### Client-Serveur
-
-Un environnement client-serveur permet un mode de communication sur un
-réseau entre les programmes. Un de ces programmes est appelé serveur qui
-répond aux requêtes d'autres programmes appelés clients. Par exemple,
-
-1.  Un client envoie un message au serveur et le serveur reçoit le
-    message et le renvoie.
-2.  Un client envoie l'opérateur et un/deux numéros et le serveur fait
-    le calcul et envoie le résultat.
-
-Référence : <https://fr.wikipedia.org/wiki/Client-serveur>
-
-Pour simuler un environnement client-serveur, on va utiliser une seule
-machine en lançant deux terminaux. Sur un des deux terminaux exécutez le
-code du serveur. Sur l'autre, exécutez le code du client.
 
 ![](../images/client-server.svg)
 
@@ -84,6 +68,22 @@ do..while) pour implémenter cette fonction. Testez votre code.
 
 #### Exercice 5.4 [★★]
 
+##### Client-Serveur
+
+Un environnement client-serveur permet un mode de communication sur un
+réseau entre les programmes. Un de ces programmes est appelé serveur qui
+répond aux requêtes d'autres programmes appelés clients. Par exemple,
+
+1.  Un client envoie un message au serveur et le serveur reçoit le
+    message et le renvoie.
+2.  Un client envoie l'opérateur et un/deux numéros et le serveur fait
+    le calcul et envoie le résultat.
+
+Référence : <https://fr.wikipedia.org/wiki/Client-serveur>
+
+Pour simuler un environnement client-serveur, on va utiliser une seule
+machine en lançant deux terminaux. Sur un des deux terminaux exécutez le
+code du serveur. Sur l'autre, exécutez le code du client.
 
 Téléchargez les fichiers suivants à partir d'e-campus : *client.h*,
 *client.c*, *serveur.h*, *serveur.c*, *Makefile*. Lisez bien tous les fichiers.
@@ -115,6 +115,7 @@ message et envoie ce message au client. Testez votre code. N'oubliez pas
 d'utiliser make (pour la compilation et la génération des fichiers
 exécutables).
 
+![](./images/client-server-message.svg)
 
 #### Exercice 5.5 [★★★]
 
@@ -142,6 +143,7 @@ calcule : 68
 
 Testez votre code avec les numéros flottants et entiers.
 
+![](../images/client-server-calcul.svg)
 
 #### Exercice 5.6 [★★★]
 
