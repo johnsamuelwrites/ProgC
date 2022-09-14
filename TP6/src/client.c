@@ -141,8 +141,17 @@ int main(int argc, char **argv)
     perror("connection serveur");
     exit(EXIT_FAILURE);
   }
-  // envoie_recois_message(socketfd);
-  envoie_couleurs(socketfd, argv[1]);
+  if (argc != 2)
+  {
+    // envoyer et recevoir un message
+    envoie_recois_message(socketfd);
+  }
+  else
+  {
+    // envoyer et recevoir les couleurs prédominantes
+    // d'une image au format BMP (argv[1])
+    envoie_couleurs(socketfd, argv[1]);
+  }
 
   close(socketfd);
 }

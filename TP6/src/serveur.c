@@ -21,8 +21,9 @@ void plot(char *data)
 
   // Extraire le compteur et les couleurs RGB
   FILE *p = popen("gnuplot -persist", "w");
-  printf("Plot");
+  printf("Plot\n");
   int count = 0;
+  int n;
   char *saveptr = NULL;
   char *str = data;
   fprintf(p, "set xrange [-15:15]\n");
@@ -38,7 +39,13 @@ void plot(char *data)
       break;
     }
     str = NULL;
-    if (count != 0)
+    printf("%d: %s\n", count, token);
+    if (count == 1)
+    {
+      n = atoi(token);
+      printf("n = %d\n", n);
+    }
+    else
     {
       // Le numéro 36, parceque 360° (cercle) / 10 couleurs = 36
       fprintf(p, "0 0 10 %d %d 0x%s\n", (count - 1) * 36, count * 36, token + 1);

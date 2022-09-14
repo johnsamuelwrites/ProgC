@@ -44,8 +44,6 @@ echo "==========================================================================
 echo "                                       Evaluation                                               "
 echo "================================================================================================"
 
-declare -a TPs
-
 TP[0]="binaire.c;bonjour.c;boucles.c;cercle.c;conditions.c;opérateurs2.c;opérateurs.c;sizeof_types.c;variables.c"
 TP[1]="bits.c;chaine.c;couleurs.c;etudiant2.c;etudiant.c;fibonacci.c;ptrvariables.c;puissance.c;tableauptr.c"
 TP[2]="chercher.c;couleur_compteur.c;couleurs.c;grand_petit.c;octets.c;recherche_dichotomique.c;sizeof.c;tri.c"
@@ -54,7 +52,7 @@ TP[4]="client.c;client.h;repertoire.c;repertoire.h;serveur.c;serveur.h"
 TP[5]="bmp.c;bmp.h;client.c;client.h;couleur.c;couleur.h;serveur.c;serveur.h"
 
 i=1
-for filelist in "${TP[@]}"
+for tpfilelist in "${TP[@]}"
 do
   directory="TP$i"
   echo "------------------------------------------------------------------------------------------------"
@@ -83,9 +81,11 @@ do
      verify_code $directory "README.md"
   fi
   
-  compile_files_in_directory $directory ${filelist}
+  compile_files_in_directory $directory ${tpfilelist}
   cd "../evaluation"
 done
 echo "================================================================================================"
 echo "                                       Evaluation Finished                                      "
 echo "================================================================================================"
+
+unset tpfilelist TP i value directory
