@@ -165,8 +165,8 @@ c.  7 ou 5, mais pas par 3
 3.  `op` (un caractère)
 
 La variable `op` contient un de ces différents opérateurs. (+, -, \*,
-/, %, &, |, ~). Utilisez `switch` et réutilisez le code de votre
-premier exercice. Si c est égal à '+', le programme fait l'addition de
+/, %, &, |, ~). Utilisez `switch` et réutilisez le code de votre exercice précédent (*opérateurs.c*). 
+Si c est égal à '+', le programme fait l'addition de
 deux variables `num1` et `num2`, si `op` est égal à '&', le
 programme fait l'opération ET etc. Rappelez-vous bien que l'on ne peut
 pas utiliser chaine de caractères comme condition en `switch`. Testez
