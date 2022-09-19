@@ -138,14 +138,15 @@ Exemple, si `compteur` = 5, le programme affiche
 
 Testez le code avec les différentes valeurs de `compteur`. Écrivez une
 nouvelle version du code en utilisant `while` ou `do..while`.
-
+Vous pouvez utiliser des branchements conditionnels ( `if`) et inconditionnels (`break`
+ou `continue`).
 
 #### Exercice 1.7 [★★]
 
  
 Écrivez un programme *conditions.c* qui utilise les boucles (`for`,
-`while` ou `do..while`) et les branchements inconditionnels (break
-ou continue) pour l'affichage de numéros <= 1000 qui sont divisible par:
+`while` ou `do..while`) et les branchements inconditionnels (`break`
+ou `continue`) pour l'affichage de numéros <= 1000 qui sont divisible par:
 
 a.  2 et 15
 
