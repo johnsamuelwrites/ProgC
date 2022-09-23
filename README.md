@@ -70,8 +70,8 @@ Votre dossier de rendu doit contenir les fichiers suivants:
 - b.  CONTRIBUTORS.md: Noms et prénoms de contributeurs
 - c.  src/ : le code source dans le répertoire *src*
 
-Votre rendu doit être renommé groupe_N1_N2, où N1 et N2 sont les
-noms (e.g., groupe_DUPONT_SMITH.).
+Votre rendu doit être renommé groupe_N1_N2.zip, où N1 et N2 sont les
+noms (e.g., groupe_DUPONT_SMITH.zip).
 
 Ecrivez README.md et CONTRIBUTORS.md en format markdown.
 
