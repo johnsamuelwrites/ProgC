@@ -19,6 +19,16 @@ int main() {
 ```
 
 ```
+$ gcc erreurs.c
+```
+
+```
+./a.out 
+*** stack smashing detected ***: terminated
+fish: Job 1, './a.out' terminated by signal SIGABRT (Abort)
+```
+
+```
 $ gcc --ggdb3 erreurs.c
 ```
 
