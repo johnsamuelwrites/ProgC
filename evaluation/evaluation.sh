@@ -32,7 +32,7 @@ compile_files_in_directory (){
     else
       echo "                                       Compiling $directory/$filename                                      "
       gcc -c $filename # Compile to check for errors
-      gcc -c -Wall -Werror -Wextra $filename # Compile to check for errors
+      gcc -c -Wall -Werror -Wextra $filename # Compile to check for errors and warnings
       verify_code $directory $filename
       rm -f *.o *.gch src/*.o src/*.gch
     fi
