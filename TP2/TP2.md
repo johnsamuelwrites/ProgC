@@ -98,7 +98,7 @@ manipulation par leurs adresses (en utilisant les pointeurs).
 Par exemple, vous avez les deux variables suivantes:
 ```
    int i = 0xa47865ff; 
-   float f = 1;
+   float f = 2;
 ```
 
 Vous devez afficher les valeurs en hexadécimal,
