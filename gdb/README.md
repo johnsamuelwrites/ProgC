@@ -1,5 +1,8 @@
 # GDB 
 
+Cet exercice présente une brève introduction à `gdb` et explique comment déboguer votre programme C à l'aide de `gdb`.
+
+Le code suivant (**erreurs.c**) présente une erreur majeure : il tente d'accéder à des indices de tableau supérieurs à la taille maximale du tableau (100). 
 
 ```
 $ cat erreurs.c 
@@ -18,9 +21,13 @@ int main() {
 }
 ```
 
+Pour la compilation et la création d'un exécutable
+
 ```
 $ gcc erreurs.c
 ```
+
+Lorsque nous exécutons le code, nous obtenons l'erreur suivante et le programme se plante (comme prévu).
 
 ```
 ./a.out 
@@ -28,9 +35,14 @@ $ gcc erreurs.c
 fish: Job 1, './a.out' terminated by signal SIGABRT (Abort)
 ```
 
+Pour déboguer ce code et trouver la source de l'erreur, nous devrons d'abord le compiler et ajouter des informations supplémentaires pour le débogage avec l'option `-ggdb3`.
+
 ```
 $ gcc --ggdb3 erreurs.c
 ```
+
+Nous allons maintenant exécuter le code avec gdb.
+
 
 ```
 $ gdb a.out
@@ -53,6 +65,10 @@ Reading symbols from a.out...
 (gdb)
 ```
 
+Une fois que vous exécutez gdb, vous verrez une autre ligne de commande avec `(gdb)`.
+
+Tapez `r` pour exécuter le programme.
+
 ```
 (gdb) r
 Starting program: ./ProgC/gdb/a.out 
@@ -64,6 +80,9 @@ Program received signal SIGABRT, Aborted.
 __pthread_kill_implementation (no_tid=0, signo=6, threadid=140737351481152) at ./nptl/pthread_kill.c:44
 44	./nptl/pthread_kill.c: No such file or directory.
 ```
+
+Le programme s'est écrasé et pour trouver la ligne qui est la raison de l'écrasement, tapez `bt`.
+
 
 ```
 (gdb) bt
@@ -80,6 +99,8 @@ __pthread_kill_implementation (no_tid=0, signo=6, threadid=140737351481152) at .
 (gdb) 
 
 ```
+
+Nous voyons que l'erreur se situe à la ligne 13 du programme (erreurs.c). Vous pouvez maintenant quitter gdb en utilisant `quit`, corriger le code et répéter les étapes ci-dessus jusqu'à ce que l'erreur soit résolue.
 
 ```
 (gdb) quit
