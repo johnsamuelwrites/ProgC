@@ -7,6 +7,10 @@ Année: 2022-2023
 
 -   Comprendre les fonctions, les fonctions récursives, la manipulation
     du répertoire et les listes.
+-   Débogage à l'aide de gdb.
+
+
+Jusqu'à présent, nous avons utilisé printf pour trouver la source des erreurs. Avant de continuer les TPs, veuillez vérifier [cet exercice](../gdb/README.md) simple pour comprendre comment déboguer le code en utilisant gdb.
 
 #### Exercice 4.1 [★]
 
