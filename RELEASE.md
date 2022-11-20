@@ -1,3 +1,13 @@
+# v1.7
+===============================================================================
+* Add exercise on gdb (debugging in C)
+* Add code for basic evaluation - ability to generate a report on compilation errors and warnings
+* Rename files considering the names given in the programming exercises
+* Remove warnings during compilation
+* Indent code
+* Update instructions
+* Correct the typos and errors
+
 # v1.6
 ===============================================================================
 * Suppport Jekyll Theme
