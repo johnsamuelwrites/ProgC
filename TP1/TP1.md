@@ -4,186 +4,230 @@ Année: 2023-2024
 ### Travaux pratiques 1
 
 #### Objectifs
-
--   Ecrire, compiler et exécuter les programmes C.
--   Utiliser des variables
--   Utiliser différents types de base.
--   Utiliser des opérateurs arithmétiques, logiques et de manipulation de bits. 
+- Introduction aux bases de la programmation en C.
+- Manipulation de variables et de types de données.
+- Utilisation d'opérateurs arithmétiques et logiques.
+- Maîtrise des boucles et des branchements conditionnels.
+- Affichage d'informations complexes et conversion.
+- Calculs mathématiques simples et utilisation de bibliothèques standard.
 
 #### Exercice 1.1 [★]
 
- 
-Créez un fichier *bonjour.c* et écrivez un programme qui affiche
-`"bonjour le monde!"` à l'écran. 
+**Affichage de "Bonjour le Monde" en C**
 
-Compilez ce fichier en utilisant gcc et exécutez le code en exécutant les commandes suivantes sur le terminal.
+Écrivez un programme C à l'intérieur du fichier *bonjour.c* qui affiche la chaîne de caractères "Bonjour le Monde!" à l'écran. Compilez le fichier *bonjour.c* en utilisant le compilateur GCC en exécutant la commande suivante dans le terminal :
 
-```
-$ gcc bonjour.c
-$ ./a.out
-```
+   ```
+   $ gcc bonjour.c
+   ```
 
-Vous pouvez également renommer votre exécutable en utilisant l'option '-o'.
+   Cela générera un fichier exécutable par défaut appelé *a.out*.
 
-```
-$ gcc -o bonjour bonjour.c 
-$ ./bonjour
-```
+Exécutez le programme en utilisant la commande suivante :
 
-Pour voir tous les avertissements (*warnings*) pendant la compilation, vous pouvez utiliser les options `-Wall` et `-Wextra`.
+   ```
+   $ ./a.out
+   ```
 
-```
-$ gcc -Wall -Wextra -o bonjour bonjour.c 
-$ ./bonjour
-```
+   Vous devriez voir le message "Bonjour le Monde!" affiché à l'écran.
+
+Vous pouvez également renommer votre exécutable en utilisant l'option '-o' lors de la compilation. Voici comment faire :
+
+   ```
+   $ gcc -o bonjour bonjour.c
+   ```
+
+   Cela générera un exécutable nommé *bonjour*.
+
+Exécutez le programme avec le nouveau nom d'exécutable :
+
+   ```
+   $ ./bonjour
+   ```
+
+Si vous souhaitez voir tous les avertissements (*warnings*) pendant la compilation, vous pouvez utiliser les options `-Wall` et `-Wextra` lors de la compilation. Voici comment faire :
+
+   ```
+   $ gcc -Wall -Wextra -o bonjour bonjour.c
+   ```
+
+   Cela générera également un exécutable nommé *bonjour*, mais vous serez averti de tout problème potentiel dans votre code lors de la compilation.
+
+Exécutez le programme avec les avertissements activés :
+
+   ```
+   $ ./bonjour
+   ```
 
 #### Exercice 1.2 [★]
 
- 
-Écrivez un programme *cercle.c* qui calcule l'aire et le périmètre d'un
-cercle
+**Calcul de l'Aire et du Périmètre d'un Cercle en C**
 
-a.  l'aire: Utilisez une variable `rayon` : float ou double
+À l'intérieur du fichier *cercle.c*, écrivez un programme en C qui calcule à la fois l'aire et le périmètre d'un cercle. Utilisez une variable `rayon` de type `float` ou `double` pour stocker le rayon du cercle.
 
-b.  le périmètre: Utilisez une variable `rayon` : float ou double
+À l'intérieur de la fonction `main()`, effectuez les opérations suivantes :
+- Mettez la valeur du rayon du cercle.
+- Calculez l'aire du cercle en utilisant la formule Aire = pi * rayon * rayon (où pi peut être approximé à 3.14159).
+- Calculez le périmètre du cercle en utilisant la formule Périmètre = 2 * pi * rayon.
 
+Affichez les valeurs calculées de l'aire et du périmètre du cercle.
 
-Compilez *cercle.c* et créez un fichier éxecutable nommé cercle.
+Compilez le fichier *cercle.c* en utilisant GCC pour créer un exécutable nommé "cercle". Vous pouvez utiliser la commande suivante dans le terminal :
 
-Exécutez 'cercle'.
+   ```
+   $ gcc -o cercle cercle.c -lm
+   ```
 
+   L'option `-lm` est utilisée pour lier la bibliothèque mathématique standard (<math.h>).
+
+Exécutez le programme en utilisant la commande suivante :
+
+   ```
+   $ ./cercle
+   ```
+
+   Assurez-vous que le fichier exécutable a été correctement généré et que vous pouvez obtenir les valeurs de l'aire et du périmètre du cercle en fonction du rayon que vous avez entré, le tout à l'intérieur de la fonction `main()`.
 
 #### Exercice 1.3 [★]
 
- 
-Écrivez un programme *sizeof_types.c* qui affiche la taille des
-différents types de base (en octets) :
+**Tailles des Types de Base**
 
-i.  char
+Écrivez un programme nommé *sizeof_types.c* dans la fonction `main()` qui affiche la taille en octets des différents types de base. Assurez-vous d'inclure à la fois les versions signées (`signed`) et non-signées (`unsigned`) lorsque cela est pertinent.
 
-ii. short
+Les types à afficher sont les suivants :
 
-iii. int
+i. `char`
 
-iv. long int
+ii. `short`
 
-v.  long long int
+iii. `int`
 
-vi. float
+iv. `long int`
 
-vii. double
+v. `long long int`
 
-viii. long double
+vi. `float`
 
+vii. `double`
 
-N'oubliez pas d'utiliser les versions signées (`signed`) et non-signées (`unsigned`). Testez le
-programme (compilez et exécutez).
+viii. `long double`
 
+Compilez et exécutez le programme pour obtenir les tailles de ces types de données en octets. Assurez-vous que toutes les instructions sont incluses dans la fonction `main()`.
 
 #### Exercice 1.4 [★★]
 
- 
-Écrivez un programme *variables.c* qui affecte et affiche les valeurs
-des variables des différents types de base :
+**Affectation et Affichage des Variables de Types de Base**
 
-i.  char
+Écrivez un programme nommé *variables.c* dans la fonction `main()` qui affecte et affiche les valeurs des variables de différents types de base. Assurez-vous d'utiliser à la fois les versions signées (`signed`) et non-signées (`unsigned`) lorsque cela est pertinent.
 
-ii. short
+Les types de base à traiter sont les suivants :
 
-iii. int
+i. `char`
 
-iv. long int
+ii. `short`
 
-v.  long long int
+iii. `int`
 
-vi. float
+iv. `long int`
 
-vii. double
+v. `long long int`
 
-viii. long double
+vi. `float`
 
+vii. `double`
 
-N'oubliez pas d'utiliser les versions signées (`signed`) et non-signées (`unsigned`). Testez
-le programme.
+viii. `long double`
 
+Dans le programme, affectez une valeur à chaque variable de type de base, puis affichez la valeur de chaque variable. Testez le programme en compilant et en l'exécutant.
 
 #### Exercice 1.5 [★★]
 
- 
-Écrivez un programme *opérateurs.c* qui utilise deux variables
-suivantes:
+**Utilisation des Opérateurs Arithmétiques et Logiques**
 
-i.  `a` = 16
+Écrivez un programme nommé *operateurs.c* dans la fonction `main()` qui utilise deux variables `a` et `b` avec les valeurs suivantes :
+
+i. `a` = 16
 
 ii. `b` = 3
 
-et testez les différents opérateurs arithmétiques et logiques.
+Dans le programme, testez les différents opérateurs arithmétiques et logiques en effectuant les actions suivantes :
 
+1. Additionnez `a` et `b` et affichez le résultat.
+
+2. Soustrayez `b` de `a` et affichez le résultat.
+
+3. Multipliez `a` par `b` et affichez le résultat.
+
+4. Divisez `a` par `b` et affichez le résultat.
+
+5. Utilisez l'opérateur de modulo (%) pour calculer le reste de la division de `a` par `b` et affichez le résultat.
+
+6. Utilisez un opérateur de comparaison pour vérifier si `a` est égal à `b` et affichez le résultat sous forme de booléen.
+
+7. Utilisez un opérateur de comparaison pour vérifier si `a` est supérieur à `b` et affichez le résultat sous forme de booléen.
+
+Testez le programme en compilant et en l'exécutant pour vous assurer que les opérateurs arithmétiques et logiques sont correctement utilisés.
 
 #### Exercice 1.6 [★★]
 
- 
-Écrivez un programme *boucles.c* qui utilise `for`, # et * et qui
-affiche un triangle rectangle. La taille du triangle est dependent de la
-valeur de la variable `compteur` (`compteur` < 4 inacceptable).
-Exemple, si `compteur` = 5, le programme affiche
+**Affichage d'un Triangle Rectangle avec des Boucles**
+
+Écrivez un programme nommé *boucles.c* dans la fonction `main()` qui utilise des boucles `for` pour afficher un triangle rectangle. La taille du triangle sera déterminée par la valeur de la variable `compteur`, qui doit être strictement inférieure à 10.
+
+Voici un exemple de ce que le programme doit afficher lorsque `compteur` est égal à 5 :
 
 ```
-*              
-* *               
-* # *              
-* # # *              
+*
+* *
+* # *
+* # # *
 * * * * *
 ```
 
-Testez le code avec les différentes valeurs de `compteur`. Écrivez une
-nouvelle version du code en utilisant `while` ou `do..while`.
-Vous pouvez utiliser des branchements conditionnels ( `if`) et inconditionnels (`break`
-ou `continue`).
+Testez le code en utilisant différentes valeurs de `compteur`.
+
+Après avoir réussi avec des boucles `for`, écrivez une nouvelle version du code en utilisant soit une boucle `while` ou `do..while`. Vous pouvez utiliser des branchements conditionnels (`if`) et inconditionnels (`break` ou `continue`) pour atteindre cet objectif.
 
 #### Exercice 1.7 [★★]
 
- 
-Écrivez un programme *conditions.c* qui utilise les boucles (`for`,
-`while` ou `do..while`) et les branchements inconditionnels (`break`
-ou `continue`) pour l'affichage de numéros <= 1000 qui sont divisible par:
+**Conditions et Boucles avec Divisibilité**
 
-a.  2 et 15
+Écrivez un programme nommé *conditions.c* dans la fonction `main()` qui utilise les boucles (`for`, `while` ou `do..while`) et les branchements inconditionnels (`break` ou `continue`) pour afficher les nombres inférieurs ou égaux à 1000 qui satisfont les conditions suivantes :
 
-b.  103 ou 107
+a. Sont divisibles par 2 et 15 simultanément.
 
-c.  7 ou 5, mais pas par 3
+b. Sont divisibles par 103 ou 107.
 
+c. Sont divisibles par 7 ou 5, mais ne sont pas divisibles par 3.
+
+Utilisez les boucles et les branchements conditionnels appropriés pour chaque cas. Testez le programme en compilant et en l'exécutant pour afficher les nombres qui répondent à ces critères.
 
 
 #### Exercice 1.8 [★★★]
 
- 
-Écrivez un programme *opérateurs2.c* qui utilise trois variables
+**Utilisation de l'opérateur switch pour des opérations mathématiques**
 
-1.  `num1` (entier)
-2.  `num2` (entier)
-3.  `op` (un caractère)
+Écrivez un programme nommé *operateurs2.c* dans la fonction `main()` qui utilise trois variables :
 
-La variable `op` contient un de ces différents opérateurs. (+, -, \*,
-/, %, &, |, ~). Utilisez `switch` et réutilisez le code de votre exercice précédent (*opérateurs.c*). 
-Si c est égal à '+', le programme fait l'addition de
-deux variables `num1` et `num2`, si `op` est égal à '&', le
-programme fait l'opération ET etc. Rappelez-vous bien que l'on ne peut
-pas utiliser chaine de caractères comme condition en `switch`. Testez
-votre programme avec différents valeurs de `num1`, `num2`, `op`. 
+1. `num1` (entier)
+2. `num2` (entier)
+3. `op` (un caractère)
 
+La variable `op` contient l'un des différents opérateurs mathématiques ou de bits suivants : '+', '-', '\*', '/', '%', '&', '|', '~'.
+
+Utilisez une structure `switch` pour déterminer l'opération à effectuer en fonction de la valeur de `op`. Par exemple, si `op` est égal à '+', le programme doit effectuer l'addition des deux variables `num1` et `num2`. Si `op` est égal à '&', le programme doit effectuer une opération ET, et ainsi de suite.
+
+Testez votre programme avec différentes valeurs de `num1`, `num2`, et `op` pour vous assurer que les opérations sont correctement effectuées en fonction de la valeur de `op`.
 
 #### Exercice 1.9 [★★★]
 
- 
-Écrivez un programme *binaire.c* qui utilise `for` pour l'affichage
-d'une variable `int` en format binaire. Rappelez-vous bien que printf n'a
-pas de code de conversion comme x (l'affichage d'un numéro en notation
-hexadécimale) ou o (l'affichage d'un numéro en notation octale) pour
-l'affichage en notation binaire. Testez votre code avec les 5 numéros
-suivants : 0, 4096, 65536, 65535, 1024
+**Affichage d'un Nombre en Format Binaire**
 
+Écrivez un programme nommé *binaire.c* dans la fonction `main()` qui utilise une boucle `for` pour afficher une variable de type `int` en format binaire. Il est important de noter que la fonction `printf` en C n'a pas de code de conversion dédié pour afficher un nombre en notation binaire, contrairement à 'x' pour l'hexadécimal ou 'o' pour l'octal.
+
+Pour résoudre ce problème, vous devrez développer votre propre code pour convertir un nombre entier en sa représentation binaire. Utilisez la division par 2 et le reste de la division (%) pour obtenir chaque chiffre binaire. Affichez ensuite ces chiffres de manière appropriée pour obtenir la représentation binaire complète du nombre.
+
+Testez votre code en utilisant les cinq nombres suivants : 0, 4096, 65536, 65535, 1024, et affichez leur représentation binaire correspondante.
 
 #### Astuce
 
