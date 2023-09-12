@@ -1,9 +1,9 @@
 Année: 2023-2024
 ----------------
 
-### Travaux pratiques 1
+# Travaux pratiques 1
 
-#### Objectifs
+## Objectifs
 - Introduction aux bases de la programmation en C.
 - Manipulation de variables et de types de données.
 - Utilisation d'opérateurs arithmétiques et logiques.
@@ -11,7 +11,7 @@ Année: 2023-2024
 - Affichage d'informations complexes et conversion.
 - Calculs mathématiques simples et utilisation de bibliothèques standard.
 
-#### Exercice 1.1 [★]
+## Exercice 1.1 [★]
 
 **Affichage de "Bonjour le Monde" en C**
 
@@ -59,7 +59,7 @@ Exécutez le programme avec les avertissements activés :
    $ ./bonjour
    ```
 
-#### Exercice 1.2 [★]
+## Exercice 1.2 [★]
 
 **Calcul de l'Aire et du Périmètre d'un Cercle en C**
 
@@ -88,7 +88,7 @@ Exécutez le programme en utilisant la commande suivante :
 
    Assurez-vous que le fichier exécutable a été correctement généré et que vous pouvez obtenir les valeurs de l'aire et du périmètre du cercle en fonction du rayon que vous avez entré, le tout à l'intérieur de la fonction `main()`.
 
-#### Exercice 1.3 [★]
+## Exercice 1.3 [★]
 
 **Tailles des Types de Base**
 
@@ -114,7 +114,7 @@ viii. `long double`
 
 Compilez et exécutez le programme pour obtenir les tailles de ces types de données en octets. Assurez-vous que toutes les instructions sont incluses dans la fonction `main()`.
 
-#### Exercice 1.4 [★★]
+## Exercice 1.4 [★★]
 
 **Affectation et Affichage des Variables de Types de Base**
 
@@ -140,7 +140,7 @@ viii. `long double`
 
 Dans le programme, affectez une valeur à chaque variable de type de base, puis affichez la valeur de chaque variable. Testez le programme en compilant et en l'exécutant.
 
-#### Exercice 1.5 [★★]
+## Exercice 1.5 [★★]
 
 **Utilisation des Opérateurs Arithmétiques et Logiques**
 
@@ -168,7 +168,7 @@ Dans le programme, testez les différents opérateurs arithmétiques et logiques
 
 Testez le programme en compilant et en l'exécutant pour vous assurer que les opérateurs arithmétiques et logiques sont correctement utilisés.
 
-#### Exercice 1.6 [★★]
+## Exercice 1.6 [★★]
 
 **Affichage d'un Triangle Rectangle avec des Boucles**
 
@@ -188,7 +188,7 @@ Testez le code en utilisant différentes valeurs de `compteur`.
 
 Après avoir réussi avec des boucles `for`, écrivez une nouvelle version du code en utilisant soit une boucle `while` ou `do..while`. Vous pouvez utiliser des branchements conditionnels (`if`) et inconditionnels (`break` ou `continue`) pour atteindre cet objectif.
 
-#### Exercice 1.7 [★★]
+## Exercice 1.7 [★★]
 
 **Conditions et Boucles avec Divisibilité**
 
@@ -203,7 +203,7 @@ c. Sont divisibles par 7 ou 5, mais ne sont pas divisibles par 3.
 Utilisez les boucles et les branchements conditionnels appropriés pour chaque cas. Testez le programme en compilant et en l'exécutant pour afficher les nombres qui répondent à ces critères.
 
 
-#### Exercice 1.8 [★★★]
+## Exercice 1.8 [★★★]
 
 **Utilisation de l'opérateur switch pour des opérations mathématiques**
 
@@ -219,7 +219,7 @@ Utilisez une structure `switch` pour déterminer l'opération à effectuer en fo
 
 Testez votre programme avec différentes valeurs de `num1`, `num2`, et `op` pour vous assurer que les opérations sont correctement effectuées en fonction de la valeur de `op`.
 
-#### Exercice 1.9 [★★★]
+## Exercice 1.9 [★★★]
 
 **Affichage d'un Nombre en Format Binaire**
 
@@ -229,28 +229,28 @@ Pour résoudre ce problème, vous devrez développer votre propre code pour conv
 
 Testez votre code en utilisant les cinq nombres suivants : 0, 4096, 65536, 65535, 1024, et affichez leur représentation binaire correspondante.
 
-#### Astuce
+## Astuce
 
 -   Utilisez les boucles dans une boucle et `if` (Exercice 1.6)
 -   Pour l'exercice 1.9, pensez à utiliser les opérateurs pour la
     manipulation de bits (&, | ou ~)
 
-#### Fichiers
+## Fichiers
 
 *binaire.c, bonjour.c, boucles.c, cercle.c, conditions.c, opérateurs2.c,
 opérateurs.c, sizeof_types.c, variables.c*
 
-#### Instructions
+## Instructions
 
 -   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs
     etc.)
 -   Créez un fichier README.md et ajoutez les détails concernant votre premier
     exercice.
 
-#### Exemple
+## Exemple
 
  
-##### CONTRIBUTORS.md
+### CONTRIBUTORS.md
 
 ```             
  1. NOM Prénom
@@ -258,7 +258,7 @@ opérateurs.c, sizeof_types.c, variables.c*
 ```             
 
 
-##### README.md
+### README.md
 
 ```             
 # Bibliothèques:               
