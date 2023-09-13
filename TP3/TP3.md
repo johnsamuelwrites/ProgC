@@ -10,10 +10,10 @@ Année: 2023-2024
 
 ## Exercice 3.1 [★]
 
-**Comprendre la Taille des Types de Données en C**
+**Comprendre la Taille des Types de Données**
 
 
-Écrivez un programme en C nommé *sizeof.c* pour comprendre la taille des différents types de données en C sur une machine 64 bits avec un système d'exploitation 64 bits. Le programme utilisera l'opérateur `sizeof` pour déterminer la taille en octets de différents types de données.
+Écrivez un programme nommé *sizeof.c* pour comprendre la taille des différents types de données en C sur une machine 64 bits avec un système d'exploitation 64 bits. Le programme utilisera l'opérateur `sizeof` pour déterminer la taille en octets de différents types de données.
 
 **Exemple**:
 Si vous exécutez le programme, il devrait afficher les tailles en octets de ces types de données sur votre machine 64 bits. Les valeurs exactes peuvent varier en fonction de votre système, mais voici un exemple hypothétique :
@@ -34,7 +34,7 @@ Remarque: Les tailles réelles peuvent varier en fonction de la machine et du co
 
 ## Exercice 3.2 [★]
 
-**Trouver le Numéro le Plus Grand et le Plus Petit dans un Tableau en C**
+**Trouver le Numéro le Plus Grand et le Plus Petit dans un Tableau**
 
 
 Écrivez un programme en C nommé *grand_petit.c* qui crée un tableau de 100 entiers et calcule à la fois le numéro le plus grand et le numéro le plus petit dans ce tableau. Le programme doit générer des valeurs aléatoires pour remplir le tableau.
@@ -56,10 +56,10 @@ Le numéro le plus petit est : 48
 ## Exercice 3.3 [★★]
 
 
-**Tri Croissant d'un Tableau en C**
+**Tri Croissant d'un Tableau**
 
 
-Écrivez un programme en C nommé *tri.c* qui crée un tableau de 100 entiers, puis trie ces entiers par ordre croissant. Vous pouvez utiliser l'algorithme de tri de votre choix, par exemple, le tri à bulles, le tri par insertion, ou le tri rapide (quicksort). Assurez-vous que le tableau est correctement trié à la fin de l'exécution du programme.
+Écrivez un programme nommé *tri.c* qui crée un tableau de 100 entiers, puis trie ces entiers par ordre croissant. Vous pouvez utiliser l'algorithme de tri de votre choix, par exemple, le tri à bulles, le tri par insertion, ou le tri rapide (quicksort). Assurez-vous que le tableau est correctement trié à la fin de l'exécution du programme.
 
 **Exemple**:
 Voici un exemple hypothétique de la sortie attendue :
@@ -76,7 +76,7 @@ Le programme devrait afficher le tableau initial non trié, puis le tableau tri�
 
 ## Exercice 3.4 [★★]
 
-**Recherche d'un Entier dans un Tableau en C**
+**Recherche d'un Entier dans un Tableau**
 
 
 Écrivez un programme en C nommé *chercher.c* qui crée un tableau de 100 entiers, puis recherche un entier spécifique dans ce tableau. Si l'entier est présent dans le tableau, affichez le message 'entier présent'. Sinon, affichez 'entier absent'.
@@ -101,13 +101,8 @@ Assurez-vous d'inclure la logique de recherche dans votre code pour déterminer 
 
 
 Regardez l'article sur la recherche dichotomique:
-<https://fr.wikipedia.org/wiki/Recherche_dichotomique>. Écrivez un
-programme *recherche_dichotomique.c* en créant un tableau de 100
-entiers et puis en cherchant un entier dans le tableau déjà tri en ordre
-croissant. Si l'entier est présent dans le tableau, affichez le message
-'entier présent'.
 
-**Recherche Dichotomique dans un Tableau Trié en C**
+**Recherche Dichotomique dans un Tableau Trié**
 
 
 Écrivez un programme en C nommé *recherche_dichotomique.c* qui crée un tableau de 100 entiers triés par ordre croissant. Ensuite, utilisez l'algorithme de recherche dichotomique pour rechercher un entier spécifique dans ce tableau. Si l'entier est présent dans le tableau, affichez le message 'entier présent'. Sinon, affichez 'entier absent'.
@@ -128,9 +123,11 @@ Le programme devrait d'abord afficher le tableau trié, puis demander à l'utili
 
 Assurez-vous d'inclure l'implémentation de l'algorithme de recherche dichotomique dans votre code pour effectuer la recherche efficacement.
 
+Référence: [Recherche Dichotomique](https://fr.wikipedia.org/wiki/Recherche_dichotomique>)
+
 ## Exercice 3.6 [★★]
 
-**Affichage des Octets de Différents Types de Données en C**
+**Affichage des Octets de Différents Types de Données**
 
 
 Écrivez un programme en C nommé *octets.c* qui utilise les opérateurs de pointeurs pour afficher les octets individuels de différentes variables de types de données, y compris short, int, long int, float, double et long double. L'objectif est de visualiser la représentation mémoire de ces types de données en octets.

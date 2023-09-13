@@ -40,7 +40,7 @@ Assurez-vous de répéter ces étapes pour chaque opérateur pris en charge (+, 
 
 ## Exercice 4.2 [★]
 
-**Gestion de Fichiers en C**
+**Gestion de Fichiers**
 
 
 Ce programme permet de gérer des fichiers en utilisant deux fonctions définies dans les fichiers `fichier.c` et `fichier.h`. Les fonctions `lire_fichier` prennent le nom d'un fichier en entrée et affichent son contenu à l'écran, tandis que `ecrire_dans_fichier` prend le nom d'un fichier et un message saisi par l'utilisateur pour écrire ce message dans le fichier.
@@ -171,7 +171,7 @@ Le programme doit lire l'opérateur et les numéros depuis la ligne de commande 
 
 ## Exercice 4.5 [★★]
 
-**Calcul de la Factorielle en C**
+**Calcul de la Factorielle**
 
 
 Le programme `factorielle.c` implémente une fonction récursive pour calculer la factorielle d'un entier naturel donné. La factorielle d'un nombre n est le produit de tous les entiers de 1 à n. Par exemple, la factorielle de 5 est 5! = 5 x 4 x 3 x 2 x 1 = 120.
@@ -211,7 +211,7 @@ Ce programme calcule et affiche la factorielle pour les entiers naturels de 0 à
 ## Exercice 4.6 [★★★]
 
  
-**Recherche de Phrases dans un Fichier en C**
+**Recherche de Phrases dans un Fichier**
 
 
 Le programme `chercherfichier.c` permet à l'utilisateur de rechercher une phrase dans un fichier donné. Le programme affiche les lignes du fichier où la phrase est présente, ainsi que le nombre de fois qu'elle apparaît dans chaque ligne.
@@ -239,7 +239,7 @@ Assurez-vous que le programme fonctionne correctement en recherchant la phrase s
 
 ## Exercice 4.7 [★★★]
 
-**Gestion d'une Liste de Couleurs en C**
+**Gestion d'une Liste de Couleurs**
 
 
 Le programme `liste.c` et `liste.h` permet de gérer une liste (simplement chaînée) de couleurs RGB. Il offre deux fonctions principales : `insertion` pour ajouter une couleur à la liste et `parcours` pour afficher toutes les couleurs de la liste.
