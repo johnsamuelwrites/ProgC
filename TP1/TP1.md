@@ -61,7 +61,7 @@ Exécutez le programme avec les avertissements activés :
 
 ## Exercice 1.2 [★]
 
-**Calcul de l'Aire et du Périmètre d'un Cercle en C**
+**Calcul de l'aire et du périmètre d'un cercle en C**
 
 À l'intérieur du fichier *cercle.c*, écrivez un programme en C qui calcule à la fois l'aire et le périmètre d'un cercle. Utilisez une variable `rayon` de type `float` ou `double` pour stocker le rayon du cercle.
 
@@ -90,7 +90,7 @@ Exécutez le programme en utilisant la commande suivante :
 
 ## Exercice 1.3 [★]
 
-**Tailles des Types de Base**
+**Tailles des types de base**
 
 Écrivez un programme nommé *sizeof_types.c* dans la fonction `main()` qui affiche la taille en octets des différents types de base. Assurez-vous d'inclure à la fois les versions signées (`signed`) et non-signées (`unsigned`) lorsque cela est pertinent.
 
@@ -116,7 +116,7 @@ Compilez et exécutez le programme pour obtenir les tailles de ces types de donn
 
 ## Exercice 1.4 [★★]
 
-**Affectation et Affichage des Variables de Types de Base**
+**Affectation et affichage des variables de types de base**
 
 Écrivez un programme nommé *variables.c* dans la fonction `main()` qui affecte et affiche les valeurs des variables de différents types de base. Assurez-vous d'utiliser à la fois les versions signées (`signed`) et non-signées (`unsigned`) lorsque cela est pertinent.
 
@@ -142,7 +142,7 @@ Dans le programme, affectez une valeur à chaque variable de type de base, puis 
 
 ## Exercice 1.5 [★★]
 
-**Utilisation des Opérateurs Arithmétiques et Logiques**
+**Utilisation des opérateurs arithmétiques et logiques**
 
 Écrivez un programme nommé *opérateurs.c* dans la fonction `main()` qui utilise deux variables `a` et `b` avec les valeurs suivantes :
 
@@ -170,7 +170,7 @@ Testez le programme en compilant et en l'exécutant pour vous assurer que les op
 
 ## Exercice 1.6 [★★]
 
-**Affichage d'un Triangle Rectangle avec des Boucles**
+**Affichage d'un triangle rectangle avec des boucles**
 
 Écrivez un programme nommé *boucles.c* dans la fonction `main()` qui utilise des boucles `for` pour afficher un triangle rectangle. La taille du triangle sera déterminée par la valeur de la variable `compteur`, qui doit être strictement inférieure à 10.
 
@@ -190,7 +190,7 @@ Après avoir réussi avec des boucles `for`, écrivez une nouvelle version du co
 
 ## Exercice 1.7 [★★]
 
-**Conditions et Boucles avec Divisibilité**
+**Conditions et boucles avec divisibilité**
 
 Écrivez un programme nommé *conditions.c* dans la fonction `main()` qui utilise les boucles (`for`, `while` ou `do..while`) et les branchements inconditionnels (`break` ou `continue`) pour afficher les nombres inférieurs ou égaux à 1000 qui satisfont les conditions suivantes :
 
@@ -221,7 +221,7 @@ Testez votre programme avec différentes valeurs de `num1`, `num2`, et `op` pour
 
 ## Exercice 1.9 [★★★]
 
-**Affichage d'un Nombre en Format Binaire**
+**Affichage d'un nombre en format binaire**
 
 Écrivez un programme nommé *binaire.c* dans la fonction `main()` qui utilise une boucle `for` pour afficher une variable de type `int` en format binaire. Il est important de noter que la fonction `printf` en C n'a pas de code de conversion dédié pour afficher un nombre en notation binaire, contrairement à 'x' pour l'hexadécimal ou 'o' pour l'octal.
 
