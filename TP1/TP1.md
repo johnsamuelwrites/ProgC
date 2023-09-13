@@ -67,8 +67,8 @@ Exécutez le programme avec les avertissements activés :
 
 À l'intérieur de la fonction `main()`, effectuez les opérations suivantes :
 - Mettez la valeur du rayon du cercle.
-- Calculez l'aire du cercle en utilisant la formule Aire = pi * rayon * rayon (où pi peut être approximé à 3.14159).
-- Calculez le périmètre du cercle en utilisant la formule Périmètre = 2 * pi * rayon.
+- Calculez l'aire du cercle en utilisant la formule aire = pi * rayon * rayon (où pi peut être approximé à 3.14159).  Vous pouvez utiliser la constante M_PI de <math.h> pour la valeur de pi (π), si vous le souhaitez (ce n'est pas obligatoire).
+- Calculez le périmètre du cercle en utilisant la formule périmètre = 2 * pi * rayon.
 
 Affichez les valeurs calculées de l'aire et du périmètre du cercle.
 
@@ -144,7 +144,7 @@ Dans le programme, affectez une valeur à chaque variable de type de base, puis 
 
 **Utilisation des Opérateurs Arithmétiques et Logiques**
 
-Écrivez un programme nommé *operateurs.c* dans la fonction `main()` qui utilise deux variables `a` et `b` avec les valeurs suivantes :
+Écrivez un programme nommé *opérateurs.c* dans la fonction `main()` qui utilise deux variables `a` et `b` avec les valeurs suivantes :
 
 i. `a` = 16
 
@@ -207,7 +207,7 @@ Utilisez les boucles et les branchements conditionnels appropriés pour chaque c
 
 **Utilisation de l'opérateur switch pour des opérations mathématiques**
 
-Écrivez un programme nommé *operateurs2.c* dans la fonction `main()` qui utilise trois variables :
+Écrivez un programme nommé *opérateurs2.c* dans la fonction `main()` qui utilise trois variables :
 
 1. `num1` (entier)
 2. `num2` (entier)
@@ -247,10 +247,10 @@ opérateurs.c, sizeof_types.c, variables.c*
 -   Créez un fichier README.md et ajoutez les détails concernant votre premier
     exercice.
 
-## Exemple
+### Exemple
 
  
-### CONTRIBUTORS.md
+#### CONTRIBUTORS.md
 
 ```             
  1. NOM Prénom
@@ -258,7 +258,7 @@ opérateurs.c, sizeof_types.c, variables.c*
 ```             
 
 
-### README.md
+#### README.md
 
 ```             
 # Bibliothèques:               
