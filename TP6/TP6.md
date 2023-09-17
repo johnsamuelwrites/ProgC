@@ -115,12 +115,12 @@ Le serveur analysera ce message JSON, effectuera le calcul demandé, puis renver
 Autres exemples :
 
 ```json
-{ 
+{
   "code" : "message",
   "valeurs" : [ "bonjour"]              
 }
 
-{                
+{
    "code" : "couleurs",
    "valeurs" : [ "0effeee", "..."]              
 }             
