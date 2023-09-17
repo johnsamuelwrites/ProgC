@@ -1,5 +1,3 @@
-CC ?= gcc
-
 COBJS ?= client.o bmp.o couleur.o
 SOBJS ?= serveur.o 
 
@@ -11,11 +9,11 @@ CLIENT = client
 all: $(SERVER) $(CLIENT)
 
 $(SERVER): $(SOBJS)
-	$(CC) -o $(SERVER) $(SOBJS)
+	gcc -o $(SERVER) $(SOBJS) -lm
 
 $(CLIENT): $(COBJS)
-	$(CC) -o $(CLIENT) $(COBJS)
+	gcc -o $(CLIENT) $(COBJS)
 
 .c.o: 
-	$(CC) -c $*.c
+	gcc -Wall -Werror -ggdb3 -c $*.c
 
