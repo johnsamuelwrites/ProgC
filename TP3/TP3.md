@@ -10,7 +10,7 @@ Année: 2023-2024
 
 ## Exercice 3.1 [★]
 
-**Comprendre la Taille des Types de Données**
+**Comprendre la taille des types de données**
 
 
 Écrivez un programme nommé *sizeof.c* pour comprendre la taille des différents types de données en C sur une machine 64 bits avec un système d'exploitation 64 bits. Le programme utilisera l'opérateur `sizeof` pour déterminer la taille en octets de différents types de données.
@@ -34,7 +34,7 @@ Remarque: Les tailles réelles peuvent varier en fonction de la machine et du co
 
 ## Exercice 3.2 [★]
 
-**Trouver le Numéro le Plus Grand et le Plus Petit dans un Tableau**
+**Trouver le numéro le plus grand et le plus petit dans un tableau**
 
 
 Écrivez un programme en C nommé *grand_petit.c* qui crée un tableau de 100 entiers et calcule à la fois le numéro le plus grand et le numéro le plus petit dans ce tableau. Le programme doit générer des valeurs aléatoires pour remplir le tableau.
@@ -56,7 +56,7 @@ Le numéro le plus petit est : 48
 ## Exercice 3.3 [★★]
 
 
-**Tri Croissant d'un Tableau**
+**Tri croissant d'un tableau**
 
 
 Écrivez un programme nommé *tri.c* qui crée un tableau de 100 entiers, puis trie ces entiers par ordre croissant. Vous pouvez utiliser l'algorithme de tri de votre choix, par exemple, le tri à bulles, le tri par insertion, ou le tri rapide (quicksort). Assurez-vous que le tableau est correctement trié à la fin de l'exécution du programme.
@@ -76,7 +76,7 @@ Le programme devrait afficher le tableau initial non trié, puis le tableau tri�
 
 ## Exercice 3.4 [★★]
 
-**Recherche d'un Entier dans un Tableau**
+**Recherche d'un entier dans un tableau**
 
 
 Écrivez un programme en C nommé *chercher.c* qui crée un tableau de 100 entiers, puis recherche un entier spécifique dans ce tableau. Si l'entier est présent dans le tableau, affichez le message 'entier présent'. Sinon, affichez 'entier absent'.
@@ -102,7 +102,7 @@ Assurez-vous d'inclure la logique de recherche dans votre code pour déterminer 
 
 Regardez l'article sur la recherche dichotomique:
 
-**Recherche Dichotomique dans un Tableau Trié**
+**Recherche dichotomique dans un tableau trié**
 
 
 Écrivez un programme en C nommé *recherche_dichotomique.c* qui crée un tableau de 100 entiers triés par ordre croissant. Ensuite, utilisez l'algorithme de recherche dichotomique pour rechercher un entier spécifique dans ce tableau. Si l'entier est présent dans le tableau, affichez le message 'entier présent'. Sinon, affichez 'entier absent'.
@@ -127,7 +127,7 @@ Référence: [Recherche Dichotomique](https://fr.wikipedia.org/wiki/Recherche_di
 
 ## Exercice 3.6 [★★]
 
-**Affichage des Octets de Différents Types de Données**
+**Affichage des octets de différents types de données**
 
 
 Écrivez un programme en C nommé *octets.c* qui utilise les opérateurs de pointeurs pour afficher les octets individuels de différentes variables de types de données, y compris short, int, long int, float, double et long double. L'objectif est de visualiser la représentation mémoire de ces types de données en octets.
@@ -161,7 +161,7 @@ Vous devrez déclarer des variables de chaque type, obtenir leurs adresses et af
 
 ## Exercice 3.7 [★★★]
 
-**Compter les Couleurs Distinctes dans un Tableau**
+**Compter les couleurs distinctes dans un tableau**
 
 
 Écrivez un programme en C nommé *couleur_compteur.c* qui stocke 100 couleurs dans un tableau et affiche les couleurs distinctes avec leur nombre d'occurrences dans le tableau. Une couleur est représentée par quatre valeurs : R (rouge), G (vert), B (bleu) et A (alpha), chacune étant un octet.
@@ -193,7 +193,7 @@ Le résultat final doit être l'affichage des couleurs distinctes et de leur nom
 
 ## Exercice 3.8 [★★★]
 
-**Rechercher une Phrase dans un Tableau de Phrases**
+**Rechercher une phrase dans un tableau de phrases**
 
 
 Écrivez un programme en C nommé *chercher2.c* qui contient un tableau de 10 phrases (tableau de tableaux de caractères) et qui recherche si une phrase donnée est présente dans le tableau. L'objectif est de réaliser cette recherche sans utiliser les fonctions de bibliothèques standards ou externes.
