@@ -99,11 +99,10 @@ Assurez-vous d'inclure la logique de recherche dans votre code pour déterminer 
 
 ## Exercice 3.5 [★★]
 
-
-Regardez l'article sur la recherche dichotomique:
-
 **Recherche dichotomique dans un tableau trié**
 
+
+Référence: [Recherche Dichotomique](https://fr.wikipedia.org/wiki/Recherche_dichotomique>)
 
 Écrivez un programme en C nommé *recherche_dichotomique.c* qui crée un tableau de 100 entiers triés par ordre croissant. Ensuite, utilisez l'algorithme de recherche dichotomique pour rechercher un entier spécifique dans ce tableau. Si l'entier est présent dans le tableau, affichez le message 'entier présent'. Sinon, affichez 'entier absent'.
 
@@ -123,7 +122,6 @@ Le programme devrait d'abord afficher le tableau trié, puis demander à l'utili
 
 Assurez-vous d'inclure l'implémentation de l'algorithme de recherche dichotomique dans votre code pour effectuer la recherche efficacement.
 
-Référence: [Recherche Dichotomique](https://fr.wikipedia.org/wiki/Recherche_dichotomique>)
 
 ## Exercice 3.6 [★★]
 
@@ -137,22 +135,22 @@ La sortie du programme pourrait ressembler à ceci :
 
 ```
 Octets de short :
-- 01 02 03
+ 02 03
 
 Octets de int :
-- 01 02 03 04 05 06 07
+ 01 02 03 04
 
 Octets de long int :
-- 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+ 01 02 03 04 05 06 07 08 
 
 Octets de float :
-- 00 a0 40
+ 00 a0 40 11
 
 Octets de double :
-- 00 00 00 00 00 f0 3f
+ 00 00 00 00 00 00 f0 3f
 
 Octets de long double :
-- 00 00 00 00 00 00 00 00 00 f0 7f
+ 00 00 00 00 00 00 00 00 00 00 f0 7f
 ```
 
 Le programme doit afficher les octets de chaque type de donnée sous forme de valeurs hexadécimales. Il devrait afficher l'ordre des octets dans la mémoire en fonction de l'architecture de la machine (petit-boutiste ou gros-boutiste). Assurez-vous d'utiliser les opérateurs de pointeurs pour accéder aux octets individuels de chaque variable.
@@ -170,16 +168,16 @@ Vous devrez déclarer des variables de chaque type, obtenir leurs adresses et af
 Supposons que le tableau contienne les couleurs suivantes :
 
 ```
--ff 0x23 0x23 0x45
--ff 0x00 0x23 0x12
--ff 0x23 0x23 0x45
+ff 0x23 0x23 0x45
+ff 0x00 0x23 0x12
+ff 0x23 0x23 0x45
 ```
 
 Le programme doit afficher :
 
 ```
--ff 0x23 0x23 0x45 : 2
--ff 0x00 0x23 0x12 : 1
+ff 0x23 0x23 0x45 : 2
+ff 0x00 0x23 0x12 : 1
 ```
 
 Le programme doit suivre ces étapes principales :
@@ -202,16 +200,16 @@ Le résultat final doit être l'affichage des couleurs distinctes et de leur nom
 Supposons que le tableau contienne les phrases suivantes :
 
 ```
-- "Bonjour, comment ça va ?"
-- "Le temps est magnifique aujourd'hui."
-- "C'est une belle journée."
-- "La programmation en C est amusante."
-- "Les tableaux en C sont puissants."
-- "Les pointeurs en C peuvent être déroutants."
-- "Il fait beau dehors."
-- "La recherche dans un tableau est intéressante."
-- "Les structures de données sont importantes."
--. "Programmer en C, c'est génial."
+ "Bonjour, comment ça va ?"
+ "Le temps est magnifique aujourd'hui."
+ "C'est une belle journée."
+ "La programmation en C est amusante."
+ "Les tableaux en C sont puissants."
+ "Les pointeurs en C peuvent être déroutants."
+ "Il fait beau dehors."
+ "La recherche dans un tableau est intéressante."
+ "Les structures de données sont importantes."
+ "Programmer en C, c'est génial."
 ```
 
 Si on recherche la phrase "La programmation en C est amusante.", le programme doit afficher "Phrase trouvée". Si on recherche "Je préfère le Python.", le programme doit afficher "Phrase non trouvée".
@@ -232,10 +230,7 @@ recherche_dichotomique.c, sizeof.c, tri.c*
 
 ## Instructions
 
--   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs,
-    les lignes importantes de code etc.). Les commentaires sont notés.
--   N'oubliez pas de mettre à jour le fichier README.md et ajouter les
-    détails concernant votre deuxième exercice.
--   Compte rendu en format .zip en un seul fichier.
-
+- N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.). Les commentaires sont notés.
+- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails concernant votre deuxième exercice.
+- Compte rendu au format .zip en un seul fichier.
 
