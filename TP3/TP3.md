@@ -231,6 +231,6 @@ recherche_dichotomique.c, sizeof.c, tri.c*
 ## Instructions
 
 - N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.). Les commentaires sont notés.
-- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails concernant votre deuxième exercice.
+- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails.
 - Compte rendu au format .zip en un seul fichier.
 

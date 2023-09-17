@@ -6,18 +6,19 @@ Année: 2023-2024
 ## Objectifs
 
 -   Comprendre les fonctions, les fonctions récursives, la manipulation
-    du répertoire et les listes.
+    des fichiers et les listes.
 -   Débogage à l'aide de gdb.
 
+## Exercice 4.0 [★]
 
 Jusqu'à présent, nous avons utilisé printf pour trouver la source des erreurs. Avant de continuer les TPs, veuillez vérifier [cet exercice](../gdb/README.md) simple pour comprendre comment déboguer le code en utilisant gdb.
 
 ## Exercice 4.1 [★]
 
-**Créer un Programme de Calcul avec Opérateurs**
+**Créer un programme de calcul avec opérateurs**
 
 
-Dans ce programme, nous allons créer un ensemble de fonctions de calcul (somme, différence, produit, quotient, modulo, 'et', ou, négation) en utilisant des fichiers d'en-tête et de code source distincts. Les opérations seront effectuées sur deux variables numériques, num1 et num2. La sélection de l'opérateur se fera à l'aide d'une variable op contenant l'un des différents opérateurs (+, -, *, /, %, &, |, ~). Le programme principal testera ces fonctions avec différentes valeurs de num1, num2 et op.
+Dans ce programme, nous allons créer un ensemble de fonctions de calcul (somme, différence, produit, quotient, modulo, 'et', ou, négation) en utilisant des fichiers d'en-tête et de code source distincts. Les opérations seront effectuées sur deux variables numériques, num1 et num2. La sélection de l'opérateur se fera à l'aide d'une variable op contenant l'un des différents opérateurs (+, -, \*, /, %, &, |, ~). Le programme principal testera ces fonctions avec différentes valeurs de num1, num2 et op.
 
 **Instructions**
 - Créez un fichier d'en-tête *operator.h* dans lequel vous déclarez les prototypes des fonctions suivantes : somme, différence, produit, quotient, modulo, 'et', ou et négation. Assurez-vous que ces fonctions prennent en paramètres deux entiers (num1 et num2) et renvoient un entier correspondant au résultat de l'opération.
@@ -35,12 +36,12 @@ Entrez l'opérateur (+, -, *, /, %, &, |, ~) : +
 Résultat : 15
 ```
 
-Assurez-vous de répéter ces étapes pour chaque opérateur pris en charge (+, -, *, /, %, &, |, ~) et affichez le résultat correspondant à chaque opération. 
+Assurez-vous de répéter ces étapes pour chaque opérateur pris en charge (+, -, \*, /, %, &, |, ~) et affichez le résultat correspondant à chaque opération. 
 
 
 ## Exercice 4.2 [★]
 
-**Gestion de Fichiers**
+**Gestion de fichiers**
 
 
 Ce programme permet de gérer des fichiers en utilisant deux fonctions définies dans les fichiers `fichier.c` et `fichier.h`. Les fonctions `lire_fichier` prennent le nom d'un fichier en entrée et affichent son contenu à l'écran, tandis que `ecrire_dans_fichier` prend le nom d'un fichier et un message saisi par l'utilisateur pour écrire ce message dans le fichier.
@@ -89,7 +90,7 @@ Assurez-vous de gérer les erreurs éventuelles, telles que l'ouverture de fichi
 
 ## Exercice 4.3 [★★]
 
-**Gestion d'une Base de Données Étudiante**
+**Gestion d'une base de données étudiante**
 
 
 Ce programme, `etudiant_bd.c`, permet de gérer une base de données d'étudiants en enregistrant leurs noms, prénoms, adresses et notes dans un fichier texte `etudiant.txt`. L'utilisateur est invité à fournir les détails de chaque étudiant via `scanf`, et ces informations sont ensuite stockées dans le fichier `etudiant.txt`.
@@ -129,10 +130,10 @@ Assurez-vous que les données sont correctement stockées dans le fichier `etudi
 
 ## Exercice 4.4 [★★]
 
-**Calculatrice en Ligne de Commande**
+**Calculatrice en ligne de commande**
 
 
-Ce programme, `calcule.c`, est une calculatrice en ligne de commande qui permet à l'utilisateur de réaliser des opérations arithmétiques et logiques simples entre deux nombres en utilisant différents opérateurs. Les opérations possibles sont l'addition (+), la soustraction (-), la multiplication (*), la division (/), le modulo (%), l'opération ET (&), l'opération OU (|) et la négation (~).
+Ce programme, `calcule.c`, est une calculatrice en ligne de commande qui permet à l'utilisateur de réaliser des opérations arithmétiques et logiques simples entre deux nombres en utilisant différents opérateurs. Les opérations possibles sont l'addition (+), la soustraction (-), la multiplication (\*), la division (/), le modulo (%), l'opération ET (&), l'opération OU (|) et la négation (~).
 
 **Instructions**
 - Réutilisez le code de `operator.c` pour les fonctions de calcul.
@@ -171,7 +172,7 @@ Le programme doit lire l'opérateur et les numéros depuis la ligne de commande 
 
 ## Exercice 4.5 [★★]
 
-**Calcul de la Factorielle**
+**Calcul de la factorielle**
 
 
 Le programme `factorielle.c` implémente une fonction récursive pour calculer la factorielle d'un entier naturel donné. La factorielle d'un nombre n est le produit de tous les entiers de 1 à n. Par exemple, la factorielle de 5 est 5! = 5 x 4 x 3 x 2 x 1 = 120.
@@ -211,7 +212,7 @@ Ce programme calcule et affiche la factorielle pour les entiers naturels de 0 à
 ## Exercice 4.6 [★★★]
 
  
-**Recherche de Phrases dans un Fichier**
+**Recherche de phrases dans un fichier**
 
 
 Le programme `chercherfichier.c` permet à l'utilisateur de rechercher une phrase dans un fichier donné. Le programme affiche les lignes du fichier où la phrase est présente, ainsi que le nombre de fois qu'elle apparaît dans chaque ligne.
@@ -239,7 +240,7 @@ Assurez-vous que le programme fonctionne correctement en recherchant la phrase s
 
 ## Exercice 4.7 [★★★]
 
-**Gestion d'une Liste de Couleurs**
+**Gestion d'une liste de couleurs**
 
 
 Le programme `liste.c` et `liste.h` permet de gérer une liste (simplement chaînée) de couleurs RGB. Il offre deux fonctions principales : `insertion` pour ajouter une couleur à la liste et `parcours` pour afficher toutes les couleurs de la liste.
@@ -283,10 +284,7 @@ chercherfichier.c, factorielle.c, fichier.h, liste.h, operator.h*
 
 ## Instructions
 
--   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs,
-    , les lignes importantes de code etc.). Les commentaires sont notés.
--   N'oubliez pas de mettre à jour le fichier README.md et ajouter les
-    détails concernant votre deuxième exercice.
--   Compte rendu en format .zip en un seul fichier.
-
+- N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.). Les commentaires sont notés.
+- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails.
+- Compte rendu au format .zip en un seul fichier.
 
