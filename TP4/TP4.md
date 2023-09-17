@@ -15,7 +15,7 @@ Jusqu'à présent, nous avons utilisé printf pour trouver la source des erreurs
 
 ## Exercice 4.1 [★]
 
-**Créer un programme de calcul avec opérateurs**
+**Calcul avec opérateurs**
 
 
 Dans ce programme, nous allons créer un ensemble de fonctions de calcul (somme, différence, produit, quotient, modulo, 'et', ou, négation) en utilisant des fichiers d'en-tête et de code source distincts. Les opérations seront effectuées sur deux variables numériques, num1 et num2. La sélection de l'opérateur se fera à l'aide d'une variable op contenant l'un des différents opérateurs (+, -, \*, /, %, &, |, ~). Le programme principal testera ces fonctions avec différentes valeurs de num1, num2 et op.
@@ -43,8 +43,7 @@ Assurez-vous de répéter ces étapes pour chaque opérateur pris en charge (+, 
 
 **Gestion de fichiers**
 
-
-Ce programme permet de gérer des fichiers en utilisant deux fonctions définies dans les fichiers `fichier.c` et `fichier.h`. Les fonctions `lire_fichier` prennent le nom d'un fichier en entrée et affichent son contenu à l'écran, tandis que `ecrire_dans_fichier` prend le nom d'un fichier et un message saisi par l'utilisateur pour écrire ce message dans le fichier.
+Ce programme a pour but de gérer des fichiers en utilisant deux fonctions définies dans les fichiers `fichier.c` et `fichier.h`. Les fonctions `lire_fichier` et `ecrire_dans_fichier` requièrent le nom d'un fichier en entrée. La fonction `lire_fichier` affiche le contenu du fichier à l'écran, tandis que `ecrire_dans_fichier` permet également à l'utilisateur de saisir un message qui sera ensuite enregistré dans le fichier.
 
 **Instructions**
 - Créez un fichier d'en-tête `fichier.h` où vous déclarez les prototypes des fonctions `lire_fichier` et `ecrire_dans_fichier`. Assurez-vous que `lire_fichier` prend une chaîne de caractères `nom_de_fichier` en entrée et `ecrire_dans_fichier` prend deux chaînes de caractères, `nom_de_fichier` et `message`.
@@ -58,8 +57,8 @@ Ce programme permet de gérer des fichiers en utilisant deux fonctions définies
 Voici un exemple d'exécution du programme :
 ```
 Que souhaitez-vous faire ?
-- Lire un fichier
-- Écrire dans un fichier
+1. Lire un fichier
+2. Écrire dans un fichier
 Votre choix : 1
 
 Entrez le nom du fichier à lire : fichier.txt
@@ -67,8 +66,8 @@ Contenu du fichier fichier.txt :
 Hello, world!
 
 Que souhaitez-vous faire ?
-- Lire un fichier
-- Écrire dans un fichier
+1. Lire un fichier
+2. Écrire dans un fichier
 Votre choix : 2
 
 Entrez le nom du fichier dans lequel vous souhaitez écrire : nouveau.txt
@@ -76,8 +75,8 @@ Entrez le message à écrire : Ceci est un nouveau fichier.
 Le message a été écrit dans le fichier nouveau.txt.
 
 Que souhaitez-vous faire ?
-- Lire un fichier
-- Écrire dans un fichier
+1. Lire un fichier
+2. Écrire dans un fichier
 Votre choix : 1
 
 Entrez le nom du fichier à lire : nouveau.txt
@@ -107,14 +106,14 @@ Ce programme, `etudiant_bd.c`, permet de gérer une base de données d'étudiant
 Voici un exemple de saisie de données par l'utilisateur :
 
 ```
-Entrez les détails de l'étudiant 1 :
+Entrez les détails de l'étudiant.e 1 :
 Nom : Dupont
 Prénom : Pierre
 Adresse : Boulevard du 11 novembre 1918, Villeurbanne
 Note 1 : 20
 Note 2 : 30
 
-Entrez les détails de l'étudiant 2 :
+Entrez les détails de l'étudiant.e 2 :
 Nom : Martin
 Prénom : Marie
 Adresse : Rue de la République, Lyon
@@ -144,13 +143,13 @@ Ce programme, `calcule.c`, est une calculatrice en ligne de commande qui permet 
 - Testez le programme en exécutant des commandes telles que :
 
    ```
-   $ calcule + 10 5
+   $ ./calcule + 10 5
    ```
 
    Vous devez afficher le résultat de l'addition (15).
 
    ```
-   $ calcule '*' 7 8
+   $ ./calcule '*' 7 8
    ```
 
    Vous devez afficher le résultat de la multiplication (56).
@@ -160,10 +159,10 @@ Assurez-vous que le programme gère correctement les différentes opérations et
 Exemple d'utilisation :
 
 ```
-$ calcule + 15 8
+$ ./calcule + 15 8
 Résultat : 23
 
-$ calcule | 5 3
+$ ./calcule | 5 3
 Résultat : 7
 ```
 
@@ -178,7 +177,6 @@ Le programme doit lire l'opérateur et les numéros depuis la ligne de commande 
 Le programme `factorielle.c` implémente une fonction récursive pour calculer la factorielle d'un entier naturel donné. La factorielle d'un nombre n est le produit de tous les entiers de 1 à n. Par exemple, la factorielle de 5 est 5! = 5 x 4 x 3 x 2 x 1 = 120.
 
 **Instructions**
-- Écrivez la fonction `factorielle` en utilisant la récursivité comme dans l'exemple donné. La fonction doit prendre un entier naturel en entrée et renvoyer sa factorielle.
 - Dans la fonction `main()`, testez la fonction `factorielle` en appelant la fonction avec différentes valeurs d'entiers naturels.
 - Affichez le résultat de chaque calcul de factorielle.
 
@@ -189,9 +187,12 @@ Exemple d'utilisation :
 // Définition de la fonction factorielle
 int factorielle(int num) {
   if (num == 0) {
+    printf("fact(0): 1\n");
     return 1;
   } else {
-    return (num * factorielle(num - 1));
+    int valeur = num * factorielle(num - 1);
+    printf("fact(%d): %d\n", num, valeur);
+    return (valeur);
   }
 }
 
@@ -199,15 +200,12 @@ int main() {
   int n;
   
   // Testez la fonction factorielle avec différentes valeurs d'entiers naturels
-  for (n = 0; n <= 10; n++) {
-    printf("%d! = %d\n", n, factorielle(n));
-  }
 
   return 0;
 }
 ```
 
-Ce programme calcule et affiche la factorielle pour les entiers naturels de 0 à 10. Assurez-vous que les résultats correspondent aux factorielles attendues pour ces nombres.
+Assurez-vous que les résultats correspondent aux factorielles attendues pour ces nombres.
 
 ## Exercice 4.6 [★★★]
 
@@ -220,7 +218,7 @@ Le programme `chercherfichier.c` permet à l'utilisateur de rechercher une phras
 **Instructions**
 - Demandez à l'utilisateur de saisir le nom du fichier dans lequel il souhaite effectuer la recherche.
 - Demandez à l'utilisateur de saisir la phrase qu'il souhaite rechercher.
-- Ouvrez le fichier en utilisant les fonctions de lecture de fichiers en C (par exemple, `fopen`, `fgets`).
+- Ouvrez le fichier en utilisant les fonctions de lecture de fichiers en C (par exemple, `open`, `read`, `fopen`, `fgets`).
 - Parcourez chaque ligne du fichier et comptez combien de fois la phrase recherchée apparaît dans chaque ligne.
 - Si la phrase est présente dans une ligne, affichez le numéro de la ligne et le nombre de fois qu'elle apparaît dans cette ligne.
 - Répétez le processus pour toutes les lignes du fichier.
