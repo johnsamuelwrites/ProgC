@@ -14,6 +14,9 @@
  * envoyées par le client. En suite, le serveur envoie un message
  * en retour
  */
-int recois_envoie_message(int socketfd);
+
+const char *svg_file_path = "pie_chart.svg";
+
+int recois_envoie_message(int, char[1024]);
 
 #endif
