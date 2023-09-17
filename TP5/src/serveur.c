@@ -5,18 +5,27 @@
  *
  */
 
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <sys/epoll.h>
+#include <arpa/inet.h>
+#include <errno.h>
 #include <netinet/in.h>
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/epoll.h>
 #include <unistd.h>
 
 #include "serveur.h"
 
-/* renvoyer un message (*data) au client (client_socket_fd)
+int socketfd; // Déclaration globale de socketfd
+
+/**
+ * Cette fonction envoie un message (*data) au client (client_socket_fd)
+ * @param client_socket_fd : Le descripteur de socket du client.
+ * @param sdata : Le message à envoyer.
+ * @return EXIT_SUCCESS en cas de succès, EXIT_FAILURE en cas d'erreur.
  */
 int renvoie_message(int client_socket_fd, char *data)
 {
@@ -24,102 +33,177 @@ int renvoie_message(int client_socket_fd, char *data)
 
   if (data_size < 0)
   {
-    perror("erreur ecriture");
-    return (EXIT_FAILURE);
+    perror("Erreur d'écriture");
+    return EXIT_FAILURE;
   }
+
+  return EXIT_SUCCESS;
+}
+
+/**
+ * Cette fonction lit les données envoyées par le client,
+ * et renvoie un message en réponse.
+ * @param socketfd : Le descripteur de socket du serveur.
+ * @param data : Le message.
+ * @return EXIT_SUCCESS en cas de succès, EXIT_FAILURE en cas d'erreur.
+ */
+int recois_envoie_message(int client_socket_fd, char *data)
+{
+  printf("Message reçu: %s\n", data);
+  char code[10];
+  if (sscanf(data, "%9s:", code) == 1) // Assurez-vous que le format est correct
+  {
+    if (strcmp(code, "message:") == 0)
+    {
+      return renvoie_message(client_socket_fd, data);
+    }
+  }
+
   return (EXIT_SUCCESS);
 }
 
-/* accepter la nouvelle connection d'un client et lire les données
- * envoyées par le client. En suite, le serveur envoie un message
- * en retour
+/**
+ * Gestionnaire de signal pour Ctrl+C (SIGINT).
+ * @param signal : Le signal capturé (doit être SIGINT pour Ctrl+C).
  */
-int recois_envoie_message(int socketfd)
+void gestionnaire_ctrl_c(int signal)
 {
-  struct sockaddr_in client_addr;
+  printf("\nSignal Ctrl+C capturé. Sortie du programme.\n");
+
+  // Fermer le socket si ouvert
+  if (socketfd != -1)
+  {
+    close(socketfd);
+  }
+
+  exit(0); // Quitter proprement le programme.
+}
+
+/**
+ * Gère la communication avec un client spécifique.
+ *
+ * @param client_socket_fd Le descripteur de socket du client à gérer.
+ */
+void gerer_client(int client_socket_fd)
+{
   char data[1024];
 
-  unsigned int client_addr_len = sizeof(client_addr);
-
-  // nouvelle connection de client
-  int client_socket_fd = accept(socketfd, (struct sockaddr *)&client_addr, &client_addr_len);
-  if (client_socket_fd < 0)
+  while (1)
   {
-    perror("accept");
-    return (EXIT_FAILURE);
+    // Réinitialisation des données
+    memset(data, 0, sizeof(data));
+
+    // Lecture des données envoyées par le client
+    int data_size = read(client_socket_fd, data, sizeof(data));
+
+    if (data_size <= 0)
+    {
+      // Erreur de réception ou déconnexion du client
+      if (data_size == 0)
+      {
+        // Le client a fermé la connexion proprement
+        printf("Client déconnecté.\n");
+      }
+      else
+      {
+        perror("Erreur de réception");
+      }
+
+      // Fermer le socket du client et sortir de la boucle de communication
+      close(client_socket_fd);
+      break; // Sortir de la boucle de communication avec ce client
+    }
+
+    recois_envoie_message(client_socket_fd, data);
   }
-
-  // la réinitialisation de l'ensemble des données
-  memset(data, 0, sizeof(data));
-
-  // lecture de données envoyées par un client
-  int data_size = read(client_socket_fd, (void *)data, sizeof(data));
-
-  if (data_size < 0)
-  {
-    perror("erreur lecture");
-    return (EXIT_FAILURE);
-  }
-
-  /*
-   * extraire le code des données envoyées par le client.
-   * Les données envoyées par le client peuvent commencer par le mot "message :" ou un autre mot.
-   */
-  printf("Message recu: %s\n", data);
-  char code[10];
-  sscanf(data, "%s:", code);
-
-  // Si le message commence par le mot: 'message:'
-  if (strcmp(code, "message:") == 0)
-  {
-    renvoie_message(client_socket_fd, data);
-  }
-
-  // fermer le socket
-  close(socketfd);
-  return (EXIT_SUCCESS);
 }
+
+/**
+ * Configuration du serveur socket et attente de connexions.
+ */
 
 int main()
 {
 
-  int socketfd;
-  int bind_status;
+  int bind_status;                // Statut de la liaison
+  struct sockaddr_in server_addr; // Structure pour l'adresse du serveur
+  int option = 1;                 // Option pour setsockopt
 
-  struct sockaddr_in server_addr;
-
-  /*
-   * Creation d'une socket
-   */
+  // Création d'une socket
   socketfd = socket(AF_INET, SOCK_STREAM, 0);
+
+  // Vérification si la création de la socket a réussi
   if (socketfd < 0)
   {
-    perror("Unable to open a socket");
+    perror("Impossible d'ouvrir une socket");
     return -1;
   }
 
-  int option = 1;
+  // Configuration de l'option SO_REUSEADDR pour permettre la réutilisation de l'adresse du serveur
   setsockopt(socketfd, SOL_SOCKET, SO_REUSEADDR, &option, sizeof(option));
 
-  // détails du serveur (adresse et port)
+  // Initialisation de la structure server_addr
   memset(&server_addr, 0, sizeof(server_addr));
   server_addr.sin_family = AF_INET;
-  server_addr.sin_port = htons(PORT);
-  server_addr.sin_addr.s_addr = INADDR_ANY;
+  server_addr.sin_port = htons(PORT);       // Port d'écoute du serveur
+  server_addr.sin_addr.s_addr = INADDR_ANY; // Accepter les connexions de n'importe quelle adresse
 
-  // Relier l'adresse à la socket
+  // Liaison de l'adresse à la socket
   bind_status = bind(socketfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
+
+  // Vérification si la liaison a réussi
   if (bind_status < 0)
   {
     perror("bind");
     return (EXIT_FAILURE);
   }
 
-  // Écouter les messages envoyés par le client
+  // Enregistrement de la fonction de gestion du signal Ctrl+C
+  signal(SIGINT, gestionnaire_ctrl_c);
+
+  // Mise en attente de la socket pour accepter les connexions entrantes jusqu'à une limite de 10 connexions en attente
   listen(socketfd, 10);
 
-  // Lire et répondre au client
-  recois_envoie_message(socketfd);
+  printf("Serveur en attente de connexions...\n");
 
+  struct sockaddr_in client_addr;                     // Structure pour l'adresse du client
+  unsigned int client_addr_len = sizeof(client_addr); // Longueur de la structure client_addr
+  int client_socket_fd;                               // Descripteur de socket du client
+
+  // Boucle infinie
+  while (1)
+  {
+    // Nouvelle connexion cliente
+    client_socket_fd = accept(socketfd, (struct sockaddr *)&client_addr, &client_addr_len);
+
+    if (client_socket_fd < 0)
+    {
+      perror("accept");
+      continue; // Continuer à attendre d'autres connexions en cas d'erreur
+    }
+
+    // Créer un processus enfant pour gérer la communication avec le client
+    pid_t child_pid = fork();
+
+    if (child_pid == 0)
+    {
+      // Code du processus enfant
+      close(socketfd); // Fermer la socket du serveur dans le processus enfant
+      gerer_client(client_socket_fd);
+      exit(0); // Quitter le processus enfant
+    }
+    else if (child_pid < 0)
+    {
+      perror("fork");
+      close(client_socket_fd); // Fermer le socket du client en cas d'erreur
+    }
+    else
+    {
+      // Code du processus parent
+      close(client_socket_fd); // Fermer le socket du client dans le processus parent
+    }
+  }
+
+  // Le programme ne devrait jamais atteindre cette ligne dans la boucle infinie
   return 0;
 }

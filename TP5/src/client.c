@@ -15,46 +15,51 @@
 
 #include "client.h"
 
-/*
- * Fonction d'envoi et de réception de messages
- * Il faut un argument : l'identifiant de la socket
+/**
+ * Fonction pour envoyer et recevoir un message depuis un client connecté à la socket.
+ *
+ * @param socketfd Le descripteur de la socket utilisée pour la communication.
+ * @return 0 en cas de succès, -1 en cas d'erreur.
  */
-
 int envoie_recois_message(int socketfd)
 {
-
   char data[1024];
-  // la réinitialisation de l'ensemble des données
+
+  // Réinitialisation de l'ensemble des données
   memset(data, 0, sizeof(data));
 
-  // Demandez à l'utilisateur d'entrer un message
+  // Demande à l'utilisateur d'entrer un message
   char message[1024];
-  printf("Votre message (max 1000 caracteres): ");
+  printf("Votre message (max 1000 caractères): ");
   fgets(message, sizeof(message), stdin);
+
+  // Construit le message avec une étiquette "message: "
   strcpy(data, "message: ");
   strcat(data, message);
 
+  // Envoie le message au client
   int write_status = write(socketfd, data, strlen(data));
   if (write_status < 0)
   {
-    perror("erreur ecriture");
-    exit(EXIT_FAILURE);
-  }
-
-  // la réinitialisation de l'ensemble des données
-  memset(data, 0, sizeof(data));
-
-  // lire les données de la socket
-  int read_status = read(socketfd, data, sizeof(data));
-  if (read_status < 0)
-  {
-    perror("erreur lecture");
+    perror("Erreur d'écriture");
     return -1;
   }
 
-  printf("Message recu: %s\n", data);
+  // Réinitialisation de l'ensemble des données
+  memset(data, 0, sizeof(data));
 
-  return 0;
+  // Lit les données de la socket
+  int read_status = read(socketfd, data, sizeof(data));
+  if (read_status < 0)
+  {
+    perror("Erreur de lecture");
+    return -1;
+  }
+
+  // Affiche le message reçu du client
+  printf("Message reçu: %s\n", data);
+
+  return 0; // Succès
 }
 
 int main()
@@ -87,8 +92,11 @@ int main()
     exit(EXIT_FAILURE);
   }
 
-  // appeler la fonction pour envoyer un message au serveur
-  envoie_recois_message(socketfd);
+  while (1)
+  {
+    // appeler la fonction pour envoyer un message au serveur
+    envoie_recois_message(socketfd);
+  }
 
   close(socketfd);
 }
