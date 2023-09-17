@@ -35,8 +35,7 @@ Les objectifs du module sont de comprendre les différents aspects de la program
   - Ubuntu
   - Machine virtuelle (VirtualBox) + Ubuntu
 - Compilateur: `gcc`
-- Logiciels: gnuplot
-  - Installation: `sudo apt install gnuplot gnuplot-x11`
+- Logiciels: firefox
   
 #### Instructions
 
