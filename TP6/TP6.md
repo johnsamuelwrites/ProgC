@@ -7,7 +7,7 @@ Année: 2023-2024
 
 -   Compréhension et modification du code, manipulation des images, et
     exécution des applications existantes sur la machine (Par exemple,
-    Firefoxi/Chrome)
+    Firefox/Chrome)
 
 
 ### BMP (format d'image)
@@ -26,13 +26,13 @@ Le format JSON (JavaScript Object Notation) est un format de données léger et 
 { 
   "nom": "Pierre Dupont", 
   "année": 4
-}.
+}
 ```
 
 **Tableaux:** Les tableaux JSON sont des listes ordonnées de valeurs. Les valeurs peuvent être des chaînes de caractères, des nombres, des booléens, des objets JSON ou des tableaux JSON. Les valeurs d'un tableau JSON sont séparées par des virgules et entourées de crochets, par exemple : 
 
 ```json
-["rouge", "vert", "bleu"].
+["rouge", "vert", "bleu"]
 ```
 
 Le format JSON est facilement lisible par les humains, ce qui le rend populaire pour stocker et échanger des données structurées.
@@ -47,9 +47,9 @@ Créer un système client-serveur qui analyse des images BMP, extrait les dix pr
 
 **Description** : Pour atteindre cet objectif, suivez les instructions suivantes :
 
--  Téléchargez les fichiers nécessaires : `client.c`, `client.h`, `serveur.c`, `serveur.h`, `couleur.h`, `couleur.c`, `bmp.c`, `bmp.h`, et le fichier `Makefile`.
+-  Utilisez les fichiers nécessaires : `client.c`, `client.h`, `serveur.c`, `serveur.h`, `couleur.h`, `couleur.c`, `bmp.c`, `bmp.h`, et le fichier `Makefile`.
 -  Téléchargez également le dossier "images" qui contient des images au format BMP provenant de Wikimedia Commons.
--  Assurez-vous de comprendre le contenu des fichiers `bmp.c` et `bmp.h`, qui vous permettront d'analyser les images BMP.
+-  Assurez-vous de comprendre le contenu des fichiers `bmp.c`, `bmp.h`, `couleur.h` et `couleur.c`qui vous permettront d'analyser les images BMP.
 -  Utilisez la commande `make` pour compiler les fichiers et générer les fichiers exécutables.
 -  Ouvrez deux terminaux. Dans le premier terminal, exécutez le serveur en utilisant la commande `./serveur`.
 -  Dans le second terminal, exécutez le client en utilisant la commande `./client chemin_d’une_image_bmp`, en remplaçant `chemin_d’une_image_bmp` par le chemin d'accès à une image BMP que vous souhaitez utiliser.
@@ -111,6 +111,21 @@ Supposons que le client souhaite envoyer une demande de calcul d'addition au ser
 ```
 
 Le serveur analysera ce message JSON, effectuera le calcul demandé, puis renverra la réponse au client au format JSON.
+
+Autres exemples :
+
+```json
+{                
+  "code" : "message",                
+  "valeurs" : [ "bonjour"]              
+}
+
+{                
+   "code" : "couleurs",                
+   "valeurs" : [ "0effeee", ...]              
+}             
+```
+
 ## Fichiers
 
 bmp.c, bmp.h, client.c, client.h, couleur.c, couleur.h, Makefile,
@@ -118,10 +133,7 @@ serveur.c, serveur.h
 
 ## Instructions
 
--   N'oubliez pas les commentaires (nom de fichier, objectif, auteurs,
-    , les lignes importantes de code etc.). Les commentaires sont notés.
--   N'oubliez pas de mettre à jour le fichier README.md et ajouter les
-    détails concernant votre deuxième exercice.
--   Compte rendu en format .zip en un seul fichier.
-
+- N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.). Les commentaires sont notés.
+- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails.
+- Compte rendu au format .zip en un seul fichier.
 

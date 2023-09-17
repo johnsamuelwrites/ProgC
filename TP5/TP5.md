@@ -5,7 +5,8 @@ Année: 2023-2024
 
 ## Objectifs
 
--   Comprendre la programmation client-serveur.
+- Comprendre la manipulation des fichiers et répertoires.
+- Comprendre la programmation client-serveur.
 
 ## Exercice 5.1 [★]
 
@@ -124,7 +125,7 @@ Exécutez le programme en saisissant le nom d'un répertoire lors de l'exécutio
 Le code fourni comprend deux programmes, le serveur (*serveur.c*) et le client (*client.c*), qui permettent de simuler un environnement client-serveur sur la même machine. Le serveur répond aux requêtes du client, ce qui permet de tester la communication entre les deux programmes.
 
 **Instructions**
-- Téléchargez les fichiers *client.h*, *client.c*, *serveur.h*, *serveur.c*, et *Makefile* à partir d'e-campus.
+- Utilisez les fichiers *client.h*, *client.c*, *serveur.h*, *serveur.c*, et *Makefile*.
 - Compilez les fichiers en utilisant la commande `make`. Cela générera les fichiers exécutables pour le client (*client*) et le serveur (*serveur*).
 - Ouvrez deux terminaux.
 - Sur le premier terminal, exécutez le serveur en utilisant la commande `./serveur`.
@@ -137,11 +138,19 @@ Exemple d'utilisation:
 ```
 Terminal 1 (Serveur):
 $ ./serveur
+Serveur en attente de connexions...
+Message reçu: message: Bonjour, le monde!!
 
+^C
+
+Signal Ctrl+C capturé. Sortie du programme.
+```
+
+```
 Terminal 2 (Client):
 $ ./client
-Entrez un message : Bonjour
-Serveur : Bonjour
+Votre message (max 1000 caractères): Bonjour, le monde!!
+Message reçu: message: Bonjour, le monde!!
 ```
 
 En suivant ces instructions, vous pourrez tester la communication entre le client et le serveur sur la même machine.
@@ -154,7 +163,7 @@ En suivant ces instructions, vous pourrez tester la communication entre le clien
 
 **Calcul**
 
-Mettre à jour les fichiers `client.c` et `serveur.c` pour prendre en charge les calculs simples (+, -, *, ...) entre le client et le serveur en utilisant un nouveau format de message.
+Mettre à jour les fichiers `client.c` et `serveur.c` pour prendre en charge les calculs simples (+, -, \*, ...) entre le client et le serveur en utilisant un nouveau format de message.
 
 **Dans `client.c`** :
 1. Ajoutez une nouvelle fonction nommée `envoie_operateur_numeros` qui prendra en charge l'envoi d'opérations de calcul au serveur. Cette fonction devra accepter l'opérateur et un (ou deux) numéros en tant que paramètres.
@@ -192,7 +201,9 @@ Instructions pour réaliser cet exercice :
 
 - Le client doit lire les notes des étudiants à partir des fichiers et envoyer une série de messages au serveur pour effectuer les calculs souhaités. Par exemple, le client peut envoyer des messages tels que :
    - "+ note1 note2" pour demander la somme de deux notes.
-   - "/ somme 5" pour demander la somme totale des notes de 5 étudiants.
+   - "+ note3 note4" pour demander la somme de deux notes.
+   - "+ somme note5" pour demander la somme.
+   - "/ somme 5" pour demander la moyenne des notes de 5 étudiants.
 
 - Le serveur doit être capable de comprendre ces messages, effectuer les calculs demandés, puis renvoyer les résultats au client.
 
@@ -214,5 +225,5 @@ serveur.h*
 ## Instructions
 
 - N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.). Les commentaires sont notés.
-- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails
+- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails.
 - Compte rendu au format .zip en un seul fichier.
