@@ -194,6 +194,10 @@ Testez le code en utilisant différentes valeurs de `compteur`.
 
 Après avoir réussi avec des boucles `for`, écrivez une nouvelle version du code en utilisant soit une boucle `while` ou `do..while`. Vous pouvez utiliser des branchements conditionnels (`if`) et inconditionnels (`break` ou `continue`) pour atteindre cet objectif.
 
+**Suggestions pour le programme :**
+
+-   Utilisez les boucles dans une boucle et `if`
+
 ## Exercice 1.7 [★★]
 
 **Conditions et boucles avec divisibilité**
@@ -236,22 +240,68 @@ Pour résoudre ce problème, vous devrez développer votre propre code pour conv
 
 Testez votre code en utilisant les cinq nombres suivants : 0, 4096, 65536, 65535, 1024, et affichez leur représentation binaire correspondante.
 
-## Astuce
+**Suggestions pour le programme :**
 
--   Utilisez les boucles dans une boucle et `if` (Exercice 1.6)
--   Pour l'exercice 1.9, pensez à utiliser les opérateurs pour la
-    manipulation de bits (&, | ou ~)
+Pensez à utiliser les opérateurs pour la manipulation de bits (&, | ou ~)
+
+##  Exercice 1.10 [★★★]
+
+**Génération d'une pyramide de nombres**
+
+**Objectif :** Écrivez un programme nommé *pyramide.c* pour générer et afficher une pyramide de nombres en utilisant des boucles imbriquées. Ce motif utilise des nombres dans un motif spécifique.
+
+**Instructions :**
+
+1. **Déclaration des variables :**
+   - Déclarez une variable entière `n` pour définir la hauteur de la pyramide (par exemple, 5).
+   - Déclarez des variables entières `i` et `j` pour les boucles imbriquées utilisées pour générer le motif.
+
+2. **Initialisation :**
+   - Initialisez `n` à une valeur fixe qui détermine la hauteur de la pyramide (par exemple, 5).
+
+3. **Boucle de génération de la pyramide :**
+   - Utilisez une boucle `for` pour itérer sur chaque niveau de la pyramide, de 1 à `n`.
+     - À chaque niveau, utilisez une boucle `for` pour afficher les espaces nécessaires afin de centrer les nombres.
+     - Utilisez une autre boucle `for` pour afficher les nombres dans ce niveau de la pyramide.
+
+4. **Affichage des résultats :**
+   - Après avoir généré chaque niveau de la pyramide, passez à la ligne suivante.
+
+5. **Terminaison :**
+   - Une fois la pyramide complète, affichez un message indiquant que la génération de la pyramide est terminée.
+
+**Exemple de pyramide générée pour `n = 5` :**
+
+```
+    1
+   121
+  12321
+ 1234321
+123454321
+```
+
+**Détails supplémentaires :**
+
+- **Espaces :** Assurez-vous que chaque ligne est correctement centrée en affichant des espaces avant les nombres.
+- **Nombres :** Chaque niveau de la pyramide doit contenir des nombres croissants de 1 jusqu'à l'indice du niveau, puis décroissants.
+- **Boucles imbriquées :** Utilisez des boucles imbriquées pour gérer les espaces et les nombres sur chaque ligne.
+
+**Suggestions pour le programme :**
+
+- Vous pouvez ajuster `n` pour générer des pyramides de différentes hauteurs.
+- Essayez de comprendre comment les boucles imbriquées interagissent pour créer le motif.
+
 
 ## Fichiers
 
 *binaire.c, bonjour.c, boucles.c, cercle.c, conditions.c, opérateurs2.c,
-opérateurs.c, sizeof_types.c, variables.c*
+opérateurs.c, sizeof_types.c, variables.c, pyramide.c*
 
 ## Instructions
 
-- N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.). Les commentaires sont notés.
-- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails.
-- Compte rendu au format .zip en un seul fichier.
+- N'oubliez pas d'ajouter des commentaires dans votre code (nom du fichier, objectif, auteurs, lignes importantes, etc.). Les commentaires seront notés.
+- Assurez-vous de mettre à jour le fichier **README.md** en y ajoutant les détails nécessaires.
+- Soumettez votre travail sous forme de fichier **.zip** en un seul document.
 
 ### Exemple
 
