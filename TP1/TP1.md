@@ -218,7 +218,7 @@ Après avoir réussi avec des boucles `for`, écrivez une nouvelle version du co
 
 **Utilisation de l'opérateur switch pour des opérations mathématiques**
 
-Écrivez un programme nommé *opérateurs2.c* dans la fonction `main()` qui utilise trois variables :
+Écrivez un programme nommé *calculs.c* dans la fonction `main()` qui utilise trois variables :
 
 1. `num1` (entier)
 2. `num2` (entier)
@@ -294,7 +294,7 @@ Pensez à utiliser les opérateurs pour la manipulation de bits (&, | ou ~)
 
 ## Fichiers
 
-*binaire.c, bonjour.c, boucles.c, cercle.c, conditions.c, opérateurs2.c,
+*binaire.c, bonjour.c, boucles.c, calculs.c, cercle.c, conditions.c,
 opérateurs.c, sizeof_types.c, variables.c, pyramide.c*
 
 ## Instructions
