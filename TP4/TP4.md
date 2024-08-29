@@ -11,7 +11,7 @@ Année: 2024-2025
 
 ## Exercice 4.0 [★]
 
-Jusqu'à présent, nous avons utilisé printf pour trouver la source des erreurs. Avant de continuer les TPs, veuillez vérifier [cet exercice](../gdb/README.md) simple pour comprendre comment déboguer le code en utilisant gdb.
+Jusqu'à présent, nous avons utilisé `printf` pour identifier les sources d'erreurs. Avant de poursuivre les travaux pratiques, veuillez compléter [cet exercice](../gdb/README.md) simple pour apprendre à déboguer le code en utilisant **gdb**.
 
 ## Exercice 4.1 [★]
 
