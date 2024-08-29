@@ -114,6 +114,12 @@ viii. `long double`
 
 Compilez et exécutez le programme pour obtenir les tailles de ces types de données en octets. Assurez-vous que toutes les instructions sont incluses dans la fonction `main()`.
 
+**Attention** : il n'existe pas de versions `unsigned` ou `signed` pour les types de données suivants :
+
+- `float`
+- `double`
+- `long double`
+
 ## Exercice 1.4 [★★]
 
 **Affectation et affichage des variables de types de base**
@@ -192,16 +198,17 @@ Après avoir réussi avec des boucles `for`, écrivez une nouvelle version du co
 
 **Conditions et boucles avec divisibilité**
 
-Écrivez un programme nommé *conditions.c* dans la fonction `main()` qui utilise les boucles (`for`, `while` ou `do..while`) et les branchements inconditionnels (`break` ou `continue`) pour afficher les nombres inférieurs ou égaux à 1000 qui satisfont les conditions suivantes :
+Écrivez un programme en C nommé *conditions.c* qui effectue les tâches suivantes :
 
-a. Sont divisibles par 2 et 15 simultanément.
+1. Utilisez une boucle `for` pour parcourir les nombres de 1 à 1000.
 
-b. Sont divisibles par 103 ou 107.
+2. Pour chaque nombre, vérifiez les conditions suivantes :
+   - Si le nombre est divisible par 5 ou par 7, ajoutez-le à une variable `somme`.
+   - Si le nombre est divisible par 11, ne l'ajoutez pas à `somme` et passez directement au nombre suivant (utilisez `continue`).
 
-c. Sont divisibles par 7 ou 5, mais ne sont pas divisibles par 3.
+3. Si la somme dépasse 5000 à tout moment, arrêtez immédiatement la boucle (utilisez `break`).
 
-Utilisez les boucles et les branchements conditionnels appropriés pour chaque cas. Testez le programme en compilant et en l'exécutant pour afficher les nombres qui répondent à ces critères.
-
+4. Affichez la somme finale après avoir terminé la boucle ou après avoir interrompu le calcul si la somme a dépassé 5000.
 
 ## Exercice 1.8 [★★★]
 
