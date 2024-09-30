@@ -170,7 +170,7 @@ L'objectif principal de l'utilisation de la commande `(gdb) break` est d'arrête
     Cela interrompra l'exécution du programme lorsqu'il atteindra la ligne 10.
 
 - **Ajouter un point d'arrêt à une fonction spécifique** :  
-  Si vous souhaitez arrêter l'exécution à chaque fois que le programme entre dans la fonction `maFonction`, vous pouvez définir un point d'arrêt avec la commande :
+  Si vous souhaitez arrêter l'exécution à chaque fois que le programme entre dans la fonction `ma_fonction`, vous pouvez définir un point d'arrêt avec la commande :
   
     ```
     (gdb) break ma_fonction
