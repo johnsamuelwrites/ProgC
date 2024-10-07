@@ -9,6 +9,13 @@ Année: 2024-2025
     des fichiers et les listes.
 -   Débogage à l'aide de gdb.
 
+## Fichier main.c
+Le fichier `main.c` est partagé par trois exercices différents (4.1, 4.2, 4.7). Créez un programme générique capable de résoudre ces trois exercices en utilisant une seule fonction `main()`. Utilisez des structures conditionnelles (`if-else`, `switch`, etc.) pour gérer les spécificités de chaque exercice.
+
+1. Créez une fonction d’entrée pour chaque exercice.
+2. Appelez ces fonctions depuis la fonction `main()`.
+3. Demandez à l’utilisateur de choisir l’exercice à résoudre avant de l’exécuter.
+
 ## Exercice 4.0 [★]
 
 Jusqu'à présent, nous avons utilisé `printf` pour identifier les sources d'erreurs. Avant de poursuivre les travaux pratiques, veuillez compléter [cet exercice](../gdb/README.md) simple pour apprendre à déboguer le code en utilisant **gdb**.
