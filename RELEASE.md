@@ -1,3 +1,11 @@
+# v1.9
+===============================================================================
+- Update description of gdb
+- Rename opérateurs2.c to calculs.c
+- Create file related to question on pyramide.c
+- Update practicals - TP1 and TP4
+- Update TP4.md - precise how to use main()
+
 # v1.8
 ===============================================================================
 - Update code and comments to handle multiple clients
