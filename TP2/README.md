@@ -1,38 +1,38 @@
-# Journal d'apprentissage
+# TP2 - Chaînes, bits, structures et pointeurs
 
-Ce fichier est optionnel. Il sert à garder une trace de votre travail, de vos erreurs et de vos corrections. Les TP ne sont pas à soumettre et ne sont pas évalués.
+Ce dossier accompagne le sujet complet du deuxième travail pratique.
 
-## Notions travaillées
+## Sujet
 
-*
-*
+Consultez le sujet complet : [TP2.md](TP2.md).
 
-## Bibliothèques utilisées
+## Objectifs
 
-*
-*
+- Approfondir les opérations mathématiques en C.
+- Manipuler des chaînes de caractères sans fonctions toutes faites.
+- Utiliser les opérations sur les bits et les masques.
+- Représenter des données avec des tableaux et des structures.
+- Commencer à manipuler les adresses et les pointeurs.
 
-## Tests réalisés
+## Fichiers sources
 
-*
-*
+Les fichiers sources attendus se trouvent dans [`src/`](src/) :
 
-## Erreurs rencontrées et corrections
+`bits.c`, `chaine.c`, `couleurs.c`, `etudiant.c`, `etudiant2.c`, `fibonacci.c`, `ptrvariables.c`, `puissance.c`, `tableauptr.c`.
 
-*
-*
+## Compilation rapide
 
-## Sources consultées
+Exemple :
 
-*
-*
+```bash
+gcc -std=c23 -Wall -Wextra -pedantic -o puissance src/puissance.c
+./puissance
+```
 
-## Utilisation éventuelle d'IA
+Compilez chaque exercice séparément, sauf indication contraire dans [TP2.md](TP2.md).
 
-*
-*
+## Vérification
 
-## Points à revoir
+Testez les programmes avec plusieurs valeurs, y compris des cas limites pour les chaînes, les tableaux et les pointeurs.
 
-*
-*
+Consultez aussi le [guide de vérification](../VERIFICATION.md).

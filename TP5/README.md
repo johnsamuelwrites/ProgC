@@ -1,38 +1,38 @@
-# Journal d'apprentissage
+# TP5 - Répertoires et client-serveur
 
-Ce fichier est optionnel. Il sert à garder une trace de votre travail, de vos erreurs et de vos corrections. Les TP ne sont pas à soumettre et ne sont pas évalués.
+Ce dossier accompagne le sujet complet du cinquième travail pratique.
 
-## Notions travaillées
+## Sujet
 
-*
-*
+Consultez le sujet complet : [TP5.md](TP5.md).
 
-## Bibliothèques utilisées
+## Objectifs
 
-*
-*
+- Parcourir des fichiers et des répertoires.
+- Comparer des approches récursives et itératives.
+- Compiler un petit projet avec `make`.
+- Comprendre une communication client-serveur simple.
+- Tester progressivement les messages envoyés et reçus.
 
-## Tests réalisés
+## Fichiers sources
 
-*
-*
+Les fichiers sources attendus se trouvent dans [`src/`](src/) :
 
-## Erreurs rencontrées et corrections
+`Makefile`, `client.c`, `client.h`, `repertoire.c`, `repertoire.h`, `serveur.c`, `serveur.h`.
 
-*
-*
+## Compilation rapide
 
-## Sources consultées
+Depuis le dossier `src/` :
 
-*
-*
+```bash
+make
+./serveur
+```
 
-## Utilisation éventuelle d'IA
+Dans un second terminal, lancez le client selon les consignes de [TP5.md](TP5.md).
 
-*
-*
+## Vérification
 
-## Points à revoir
+Testez les chemins valides et invalides, les messages vides, les opérations non reconnues et plusieurs demandes successives.
 
-*
-*
+Consultez aussi le [guide de vérification](../VERIFICATION.md).

@@ -1,38 +1,38 @@
-# Journal d'apprentissage
+# TP6 - Images BMP, couleurs et messages structurés
 
-Ce fichier est optionnel. Il sert à garder une trace de votre travail, de vos erreurs et de vos corrections. Les TP ne sont pas à soumettre et ne sont pas évalués.
+Ce dossier accompagne le sujet complet du sixième travail pratique.
 
-## Notions travaillées
+## Sujet
 
-*
-*
+Consultez le sujet complet : [TP6.md](TP6.md).
 
-## Bibliothèques utilisées
+## Objectifs
 
-*
-*
+- Comprendre et modifier un code existant.
+- Lire des images BMP et extraire des couleurs.
+- Faire communiquer un client et un serveur.
+- Générer des sorties visuelles à partir de données.
+- Structurer les messages échangés dans un format inspiré de JSON.
 
-## Tests réalisés
+## Fichiers sources
 
-*
-*
+Les fichiers sources attendus se trouvent dans [`src/`](src/) :
 
-## Erreurs rencontrées et corrections
+`Makefile`, `bmp.c`, `bmp.h`, `client.c`, `client.h`, `couleur.c`, `couleur.h`, `serveur.c`, `serveur.h`.
 
-*
-*
+## Compilation rapide
 
-## Sources consultées
+Depuis le dossier `src/` :
 
-*
-*
+```bash
+make
+./serveur
+```
 
-## Utilisation éventuelle d'IA
+Dans un second terminal, lancez le client avec une image BMP selon les consignes de [TP6.md](TP6.md).
 
-*
-*
+## Vérification
 
-## Points à revoir
+Testez plusieurs images, plusieurs nombres de couleurs et des messages mal formés afin de vérifier la robustesse du client et du serveur.
 
-*
-*
+Consultez aussi le [guide de vérification](../VERIFICATION.md).
