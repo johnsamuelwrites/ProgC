@@ -41,7 +41,7 @@ compile_files_in_directory (){
 }
 
 echo "================================================================================================"
-echo "                                       Evaluation                                               "
+echo "                                       Verification                                             "
 echo "================================================================================================"
 
 TP[0]="binaire.c;bonjour.c;boucles.c;cercle.c;conditions.c;opérateurs2.c;opérateurs.c;sizeof_types.c;variables.c"
@@ -56,28 +56,18 @@ for tpfilelist in "${TP[@]}"
 do
   directory="TP$i"
   echo "------------------------------------------------------------------------------------------------"
-  echo "                                       Evaluating $directory                                     "
+  echo "                                       Verifying $directory                                      "
   echo "------------------------------------------------------------------------------------------------"
   i=$((i + 1))
   cd "../$directory"
   ls
   ls src/
 
-  verify_if_not_empty_file "CONTRIBUTORS.md"
-  value=$?
-  if [ "$value" = 1 ]
-  then  
-     echo "Empty CONTRIBUTORS.md file"
-  else
+  if [ -f "CONTRIBUTORS.md" ]; then
      verify_code $directory "CONTRIBUTORS.md"
   fi
 
-  verify_if_not_empty_file "README.md"
-  value=$?
-  if [ "$value" = 1 ]
-  then  
-     echo "Empty README.md file"
-  else
+  if [ -f "README.md" ]; then
      verify_code $directory "README.md"
   fi
   
@@ -85,7 +75,7 @@ do
   cd "../evaluation"
 done
 echo "================================================================================================"
-echo "                                       Evaluation Finished                                      "
+echo "                                       Verification Finished                                    "
 echo "================================================================================================"
 
 unset tpfilelist TP i value directory

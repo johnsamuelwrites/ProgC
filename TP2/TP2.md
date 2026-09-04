@@ -92,6 +92,20 @@ Voici un exemple d'utilisation de ce programme :
 
 Assurez-vous de respecter les consignes en évitant l'utilisation de bibliothèques standard ou externes pour ces opérations.
 
+**Analyse critique de code généré :**
+
+Un assistant d'IA peut proposer rapidement des fonctions de manipulation de chaînes, mais ces fonctions sont souvent fragiles en C. Après avoir écrit votre propre version, demandez éventuellement à un assistant de proposer une autre solution, puis vérifiez-la manuellement.
+
+Questions à traiter :
+
+- La chaîne copiée ou concaténée se termine-t-elle toujours par `\0` ?
+- La fonction connaît-elle la taille du tableau de destination ?
+- Que se passe-t-il si la chaîne source est vide ?
+- Que se passe-t-il si la destination est trop petite ?
+- Le programme lit-il ou écrit-il au-delà des limites du tableau ?
+
+Compilez et testez votre programme avec des chaînes vides, courtes, longues et contenant des espaces.
+
 ## Exercice 2.5 [★★]
 
 
@@ -271,4 +285,3 @@ ptrvariables.c, puissance.c, tableauptr.c*
 ## Instructions
 
 - N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.).
-

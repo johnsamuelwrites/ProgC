@@ -85,23 +85,23 @@ N'oubliez pas d'utiliser la commande `make` pour recompiler vos fichiers après 
 
 ## Exercice 6.3 [★★★]
 
-**Objectif** : Modifier le code client.c et serveur.c pour utiliser le format de messages JSON lors de la communication entre le client et le serveur.
+**Objectif** : Modifier le code client.c et serveur.c pour utiliser un format de messages structuré inspiré de JSON lors de la communication entre le client et le serveur.
 
-Actuellement, les fichiers client.c et serveur.c utilisent des messages simples pour communiquer. L'objectif est de passer à un format de messages JSON plus structuré. Les messages JSON contiendront un code d'opération et des valeurs associées.
+Actuellement, les fichiers client.c et serveur.c utilisent des messages simples pour communiquer. L'objectif est de passer à un format plus structuré, lisible et vérifiable. Les messages contiendront un code d'opération et des valeurs associées.
 
 **Instructions** :
 
 -  Dans client.c :
-   - Modifiez le code pour créer des messages au format JSON. Utilisez une bibliothèque JSON en C, comme cJSON, si nécessaire.
-   - Remplacez les anciens messages simples par les nouveaux messages JSON. Par exemple, remplacez "message: bonjour" par un message JSON approprié.
+   - Modifiez le code pour créer des messages structurés. N'utilisez pas de bibliothèque JSON externe.
+   - Remplacez les anciens messages simples par les nouveaux messages structurés. Par exemple, remplacez "message: bonjour" par un message contenant explicitement un champ `code`.
 -  Dans serveur.c :
-   - Modifiez le code pour traiter les messages JSON reçus du client. Analysez les messages JSON pour extraire les informations nécessaires, telles que le code de l'opération et les valeurs associées.
-   - Répondez au client au format JSON en fonction de l'opération demandée. Par exemple, si le client envoie une demande de calcul, le serveur devrait renvoyer la réponse au format JSON.
--  Vous pouvez utiliser une bibliothèque JSON en C, comme cJSON, pour faciliter le traitement des messages JSON dans le serveur.
--  Assurez-vous de mettre à jour les instructions et les commentaires pour refléter les nouvelles modifications et le format JSON des messages.
+   - Modifiez le code pour traiter les messages reçus du client. Analysez les messages pour extraire les informations nécessaires, telles que le code de l'opération et les valeurs associées.
+   - Répondez au client avec le même format structuré. Par exemple, si le client envoie une demande de calcul, le serveur doit renvoyer une réponse contenant le résultat ou une erreur.
+-  Assurez-vous de mettre à jour les instructions et les commentaires pour refléter le nouveau format des messages.
+-  Vérifiez les longueurs des chaînes, les délimiteurs attendus, les nombres de valeurs et les erreurs de parsing.
 
 **Exemple** :
-Supposons que le client souhaite envoyer une demande de calcul d'addition au serveur. Au lieu d'envoyer "calcule: + 23 45", le client enverra un message JSON tel que :
+Supposons que le client souhaite envoyer une demande de calcul d'addition au serveur. Au lieu d'envoyer "calcule: + 23 45", le client enverra un message structuré tel que :
 
 ```json
 {
@@ -110,7 +110,11 @@ Supposons que le client souhaite envoyer une demande de calcul d'addition au ser
 }
 ```
 
-Le serveur analysera ce message JSON, effectuera le calcul demandé, puis renverra la réponse au client au format JSON.
+Le serveur analysera ce message, effectuera le calcul demandé, puis renverra la réponse au client avec le même format.
+
+**Analyse critique :**
+
+Un véritable parseur JSON robuste est complexe. Dans cet exercice, limitez volontairement le format accepté et documentez ces limites. Un message inattendu ne doit pas provoquer de dépassement de tampon, de lecture hors limites ou d'arrêt brutal du serveur.
 
 Autres exemples :
 
@@ -134,4 +138,3 @@ serveur.c, serveur.h
 ## Instructions
 
 - N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.).
-

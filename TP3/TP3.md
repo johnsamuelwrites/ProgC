@@ -157,6 +157,18 @@ Le programme doit afficher les octets de chaque type de donnée sous forme de va
 
 Vous devrez déclarer des variables de chaque type, obtenir leurs adresses et afficher les octets correspondants.
 
+**Portabilité et représentation mémoire :**
+
+Ajoutez une courte fonction qui indique si votre machine semble utiliser un ordre petit-boutiste ou gros-boutiste pour les entiers. Expliquez ensuite pourquoi l'affichage des octets peut varier selon l'architecture, le compilateur et les options de compilation.
+
+Points à vérifier :
+
+- utilisez un pointeur vers `unsigned char` pour parcourir les octets d'un objet ;
+- n'interprétez pas directement les octets d'un type comme s'ils formaient toujours la même valeur sur toutes les machines ;
+- comparez les tailles obtenues avec `sizeof` ;
+- testez au moins un entier, un flottant simple précision et un flottant double précision ;
+- expliquez dans votre journal d'apprentissage ce qui relève de la norme C et ce qui relève de l'implémentation.
+
 ## Exercice 3.7 [★★★]
 
 **Compter les couleurs distinctes dans un tableau**
@@ -231,4 +243,3 @@ recherche_dichotomique.c, sizeof.c, tri.c*
 ## Instructions
 
 - N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.).
-

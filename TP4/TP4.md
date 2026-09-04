@@ -20,6 +20,23 @@ Le fichier `main.c` est partagé par trois exercices différents (4.1, 4.2, 4.7)
 
 Jusqu'à présent, nous avons utilisé `printf` pour identifier les sources d'erreurs. Avant de poursuivre les travaux pratiques, veuillez compléter [cet exercice](../gdb/README.md) simple pour apprendre à déboguer le code en utilisant **gdb**.
 
+Après l'exercice avec `gdb`, compilez aussi un petit programme fautif avec des options de vérification :
+
+```bash
+gcc -std=c23 -Wall -Wextra -pedantic -g fichier.c
+gcc -std=c23 -Wall -Wextra -pedantic -g -fsanitize=address,undefined fichier.c
+```
+
+Comparez les informations obtenues :
+
+- avertissement de compilation ;
+- erreur détectée à l'exécution ;
+- arrêt du programme ;
+- trace d'appels dans `gdb` ;
+- message produit par un sanitizer.
+
+Expliquez pourquoi un programme C qui compile peut encore être incorrect ou dangereux.
+
 ## Exercice 4.1 [★]
 
 **Calcul avec opérateurs**
@@ -290,4 +307,3 @@ chercherfichier.c, factorielle.c, fichier.h, liste.h, operator.h*
 ## Instructions
 
 - N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.).
-

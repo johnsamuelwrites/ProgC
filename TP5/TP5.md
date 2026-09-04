@@ -175,6 +175,16 @@ Mettre à jour les fichiers `client.c` et `serveur.c` pour prendre en charge les
 3. Implémentez la logique nécessaire pour effectuer les calculs demandés par le client (par exemple, addition, soustraction, multiplication, etc.).
 4. Envoyez le résultat au client sous la forme d'un message.
 
+**Format de message attendu :**
+
+Définissez précisément le format accepté par le serveur. Par exemple :
+
+```text
+calcule : <operateur> <nombre1> <nombre2>
+```
+
+Le serveur doit refuser les messages incomplets ou mal formés sans se terminer brutalement.
+
 **Exemple d'utilisation** :
 1. L'utilisateur entre `calcule : + 23 45` dans le client.
 2. Le client utilise `envoie_operateur_numeros` pour envoyer ce message au serveur.
@@ -183,6 +193,17 @@ Mettre à jour les fichiers `client.c` et `serveur.c` pour prendre en charge les
 5. Le client affiche le résultat, par exemple, `calcule : 68`.
 
 En suivant ces instructions, vous pourrez mettre à jour votre système client-serveur pour prendre en charge les calculs simples entre le client et le serveur en utilisant un nouveau format de message.
+
+**Cas à tester :**
+
+- opérateur inconnu ;
+- division par zéro ;
+- message sans nombre ;
+- message avec trop de valeurs ;
+- chaîne vide ;
+- plusieurs demandes successives du même client.
+
+Pour chaque cas, affichez un message d'erreur clair côté client ou côté serveur.
 
 ![](../images/client-server-calcul.svg)
 
