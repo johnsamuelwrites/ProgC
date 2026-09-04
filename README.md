@@ -1,7 +1,7 @@
 # ProgC
 Sujets de travaux pratiques du module **Programmation en C**
 
-## Année: 2025-2026
+## Année: 2026-2027
 ###  Sujets de travaux pratiques
 * [TP1](TP1/TP1.md)
 * [TP2](TP2/TP2.md)
@@ -38,44 +38,20 @@ Les objectifs du module sont de comprendre les différents aspects de la program
 4. Les séances sont encadrées par un intervenant ou enseignant.
 5. N'utilisez pas de bibliothèques externes.
 
-#### Evaluation
+#### Travaux pratiques et niveaux de difficulté
 
-1. Les travaux pratiques comptent pour 40 % de votre note finale.
-2. Il y a six travaux pratiques. Chaque travail pratique (TP) comporte plusieurs exercices, et chaque exercice est noté.
-3. Le total des points pour tous les travaux pratiques est de 20.
-4. Les rendus doivent être faits en ligne.
-5. Chaque question a un niveau de difficulté :
-   - ★ : Facile
-   - ★★ : Moyenne
-   - ★★★ : Difficile
+Il y a six travaux pratiques, chacun comportant plusieurs exercices.
 
-#### Rendus
+Chaque question a un niveau de difficulté :
 
-Il y a deux éléments à rendre : le rapport d'auto-évaluation et les fichiers sources.
-
-Votre dossier de rendu doit contenir les fichiers suivants :
-
-- **a. README.md** : rapport d'auto-évaluation  
-- **b. CONTRIBUTORS.md** : noms et prénoms des contributeurs  
-- **c. src/** : le code source dans le répertoire *src*  
-
-Votre fichier de rendu doit être renommé selon le format suivant : **groupe_N1_N2.zip**, où **N1** et **N2** sont les noms des membres du groupe (par exemple, **groupe_DUPONT_SMITH.zip**).
-
-Rédigez les fichiers README.md et CONTRIBUTORS.md au format Markdown.
-
-**Contenu de README.md** (rapport d'auto-évaluation) : TP N (N : [1..6])
-
-- **i. Bibliothèques** : bibliothèques standard utilisées  
-- **ii. Références** : URL et groupes consultés  
-- **iii. Difficulté** : niveau de difficulté (facile, moyen, difficile)  
-- **iv. Commentaires (optionnels)** : remarques, etc.  
+- ★ : Facile
+- ★★ : Moyenne
+- ★★★ : Difficile
 
 #### Liste de contrôle
 
-Avant de déposer votre travail pratique, assurez-vous de respecter la liste de contrôle suivante :
+Avant de considérer un travail pratique comme terminé, assurez-vous de respecter la liste de contrôle suivante :
 
--   ✅ Les prénoms et noms des membres du binôme sont présents dans le fichier **CONTRIBUTORS.md**.
--   ✅ Le fichier **README.md** est entièrement rempli.
 -   ✅ Les noms des fichiers de chaque exercice respectent ceux demandés dans les travaux pratiques.
 -   ✅ Votre code est bien commenté.
 -   ✅ Votre code se compile sans aucune erreur (et, si possible, sans aucun avertissement).
@@ -101,9 +77,6 @@ $ git pull
 
 #### ⚠️ Attention
 
-- Aucune soumission par courriel ne sera acceptée.
-- Les liens vers des sites externes, tels que GitHub, GitLab, etc., ne seront pas acceptés.
-- Seules les soumissions complètes sur E-Campus seront acceptées pour l'évaluation.
 - Ne modifiez pas les noms des fichiers (\*.c, \*.h, \*.md, etc.).
 
 # Author

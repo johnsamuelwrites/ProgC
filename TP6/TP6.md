@@ -1,4 +1,4 @@
-Année: 2025-2026
+Année: 2026-2027
 ----------------
 
 ### Travaux pratiques 6
@@ -133,7 +133,5 @@ serveur.c, serveur.h
 
 ## Instructions
 
-- N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.). Les commentaires sont notés.
-- N'oubliez pas de mettre à jour le fichier README.md et d'ajouter les détails.
-- Compte rendu au format .zip en un seul fichier.
+- N'oubliez pas les commentaires (nom du fichier, objectif, auteurs, lignes importantes de code, etc.).
 

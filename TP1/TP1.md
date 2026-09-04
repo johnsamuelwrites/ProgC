@@ -1,4 +1,4 @@
-Année: 2025-2026
+Année: 2026-2027
 ----------------
 
 # Travaux pratiques 1
@@ -299,38 +299,4 @@ opérateurs.c, sizeof_types.c, variables.c, pyramide.c*
 
 ## Instructions
 
-- N'oubliez pas d'ajouter des commentaires dans votre code (nom du fichier, objectif, auteurs, lignes importantes, etc.). Les commentaires seront notés.
-- Assurez-vous de mettre à jour le fichier **README.md** en y ajoutant les détails nécessaires.
-- Soumettez votre travail sous forme de fichier **.zip** en un seul document.
-
-### Exemple
-
- 
-#### CONTRIBUTORS.md
-
-```             
- 1. NOM Prénom
- 2. NOM Prénom
-```             
-
-
-#### README.md
-
-```             
-# Bibliothèques:               
-* stdio.h               
-* ..              
-
-# Références:               
-* groupe..               
-* http://www.example.com               
-* ..              
-
-# Difficulté: ..               
-* ..              
-
-# Commentaires               
-* commentaire 1               
-* commentaire 2               
-* ..             
-```
+- N'oubliez pas d'ajouter des commentaires dans votre code (nom du fichier, objectif, auteurs, lignes importantes, etc.).
