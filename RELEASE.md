@@ -1,3 +1,8 @@
+# v2.0
+===============================================================================
+- Update academic year 2025-2026
+- Add file for the exercise on searching a sentence in an array of sentences (TP3 - chercher2.c)
+
 # v1.9
 ===============================================================================
 - Update description of gdb
